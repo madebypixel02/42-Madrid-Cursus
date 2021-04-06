@@ -6,7 +6,12 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:05:45 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/05 17:05:46 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/06 17:32:58 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+{
+}

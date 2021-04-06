@@ -6,7 +6,12 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:10:05 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/05 17:10:06 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/06 17:34:36 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+}

@@ -6,7 +6,12 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:05:34 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/05 17:06:27 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/06 17:33:54 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+}

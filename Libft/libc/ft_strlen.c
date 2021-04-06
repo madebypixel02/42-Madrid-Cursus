@@ -6,19 +6,21 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:08:42 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/05 17:22:18 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/06 17:20:58 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int count;
+	size_t	count;
 
 	count = 0;
-	while (*str != '\0')
+	while (*s != '\0')
 	{
 		count++;
-		str++;
+		s++;
 	}
 	return (count);
 }

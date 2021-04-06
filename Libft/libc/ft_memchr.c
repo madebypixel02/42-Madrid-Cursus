@@ -6,7 +6,12 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:06:47 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/05 17:06:49 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/06 17:33:08 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+}
