@@ -1,15 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/05 16:59:31 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/06 17:41:18 by aperez-b         ###   ########.fr       */
+/*   Created: 2021/04/05 17:08:42 by aperez-b          #+#    #+#             */
+/*   Updated: 2021/04/07 10:18:48 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	**ft_split(char const *s, char c)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
+	size_t	count;
+
+	count = 0;
+	while (*s != '\0')
+	{
+		count++;
+		s++;
+	}
+	return (count);
 }

@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:32:34 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/06 17:28:51 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/06 18:30:25 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <string.h>
+# include <ctype.h>
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
