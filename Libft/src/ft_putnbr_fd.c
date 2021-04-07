@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:03:16 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/07 17:05:46 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/07 19:46:29 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	int		digit;
-	char 	c;
+	char	c;
+
 	if (n == -2147483648)
 	{
 		ft_putchar_fd('-', fd);
