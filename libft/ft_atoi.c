@@ -6,9 +6,11 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:10:37 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/08 09:55:58 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/08 21:20:13 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isspace(char c)
 {
@@ -19,23 +21,27 @@ int	ft_isspace(char c)
 
 int	ft_atoi(const char *nptr)
 {
-	int		nbr;
-	char	sign;
+	long long unsigned	n;
+	int					sign;
+	long long unsigned	max;
 
-	nbr = 0;
-	sign = '+';
-	while (ft_isspace(*nptr) == 1)
-		nptr++;
-	if (*nptr == '+' || *nptr == '-')
+	sign = 1;
+	max = 9223372036854775807;
+	n = 0;
+	while (ft_isspace(*nptr))
 		nptr++;
 	if (*nptr == '-')
-		sign = '-';
-	while (*nptr >= 48 && *nptr <= 57)
+		sign = -sign;
+	if (*nptr == '-' || *nptr == '+')
+		nptr++;
+	while (*nptr >= '0' && *nptr <= '9')
 	{
-		nbr = (nbr * 10) + *nptr - '0';
+		if (10 * n + (*nptr - '0') > max && sign == 1)
+			return (-1);
+		if (10 * n + (*nptr - '0') > max && sign == -1)
+			return (0);
+		n = 10 * n + (*nptr - '0');
 		nptr++;
 	}
-	if (sign == '-')
-		nbr = -nbr;
-	return (nbr);
+	return (sign * n);
 }
