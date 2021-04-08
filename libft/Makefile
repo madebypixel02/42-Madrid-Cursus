@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 19:30:31 by aperez-b          #+#    #+#              #
-#    Updated: 2021/04/08 09:57:10 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/04/08 13:09:00 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,10 +25,10 @@ RM = rm -f
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(FLAGS) $(OBJ) -o $(NAME) -I $(HEADERS)
+	ar rc $(NAME) $(OBJ)
 
 $(OBJ): $(SRC)
-	$(CC) $(FLAGS) -c $(SRC)
+	$(CC) $(CFLAGS) -c $(SRC)
 
 so:
 	$(CC) -fPIC $(CFLAGS) $(SRC)
@@ -38,7 +38,7 @@ clean:
 	$(RM) $(OBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) libft.so
 
 re: fclean all
 
