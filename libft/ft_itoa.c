@@ -6,17 +6,19 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:00:03 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/07 17:54:14 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/08 23:30:41 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbrlen(int n)
+int	ft_nbrlen(long n)
 {
 	int	len;
 
 	len = 0;
+	if (n == 0)
+		len++;
 	while (n != 0)
 	{
 		len++;
@@ -25,30 +27,56 @@ int	ft_nbrlen(int n)
 	return (len);
 }
 
+char	*ft_fill_str(char *str, int len, int n, int n_bak)
+{
+	str[len] = '\0';
+	while (len-- > 0)
+	{
+		if (len > 0 || n_bak >= 0)
+			str[len] = (n % 10) + '0';
+		n /= 10;
+	}
+	return (str);
+}
+
+char	*ft_allocate_str(char *str, int len, int n, int n_bak)
+{
+	if (n >= 0)
+	{
+		str = (char *)malloc(len + 1);
+		if (str == NULL)
+			return (NULL);
+	}
+	else if (n < 0 && n != -2147483648)
+	{
+		str = (char *)malloc(++len + 1);
+		if (str == NULL)
+			return (NULL);
+		str[0] = '-';
+		n = -n;
+	}
+	else
+	{
+		str = (char *)malloc(12);
+		if (str == NULL)
+			return (NULL);
+		ft_strlcpy(str, "-2147483648", 12);
+		return (str);
+	}
+	return (ft_fill_str(str, len, n, n_bak));
+}
+
 char	*ft_itoa(int n)
 {
 	char	*str;
 	int		len;
-	int		nb;
+	int		n_bak;
 
+	n_bak = n;
 	len = ft_nbrlen(n);
-	nb = n;
-	if (nb < 0)
-	{
-		str = (char *)malloc(len++ + 1);
-		str[0] = '-';
-		n = -n;
-	}
-	else if (nb > 0)
-		str = (char *)malloc(len + 1);
-	else
-		return ("0");
-	str[len] = '\0';
-	while (len-- >= 0)
-	{
-		if (len > 0 || nb > 0)
-			str[len] = (n % 10) + '0';
-		n /= 10;
-	}
+	str = NULL;
+	str = ft_allocate_str(str, len, n, n_bak);
+	if (str == NULL)
+		return (NULL);
 	return (str);
 }
