@@ -1,4 +1,5 @@
 libft-unit-test/
 a.out
 *.o
+*.so
 main.c
