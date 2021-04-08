@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:10:37 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/06 16:29:58 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/08 09:55:58 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,5 @@ int	ft_atoi(const char *nptr)
 	}
 	if (sign == '-')
 		nbr = -nbr;
-	if (nbr > __LONG_MAX__ - 1 || nbr <= 1 * __LONG_MAX__)
-		return (0);
 	return (nbr);
 }

@@ -1,0 +1,4 @@
+libft-unit-test/
+a.out
+*.o
+main.c
