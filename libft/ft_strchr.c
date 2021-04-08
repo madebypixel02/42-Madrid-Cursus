@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:09:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/07 18:25:55 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/08 13:52:44 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	if (c == '\0')
+		return ((char *)&s[ft_strlen(s)]);
 	while (*s != '\0')
 	{
 		if (*s == c)
