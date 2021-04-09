@@ -6,12 +6,12 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:04:33 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/06 17:31:33 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/09 20:22:08 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
-{
-}
+//void	ft_bzero(void *s, size_t n)
+//{
+//}

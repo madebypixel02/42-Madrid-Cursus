@@ -1,4 +1,5 @@
 libft-unit-test/
+libftTester/
 a.out
 *.o
 *.so

@@ -6,10 +6,10 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:00:44 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/06 17:41:59 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/09 20:23:00 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
-{
-}
+//char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+//{
+//}
