@@ -6,18 +6,11 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:10:37 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/08 21:20:13 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/11 08:29:23 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_isspace(char c)
-{
-	if ((c >= 9 && c <= 13) || c == ' ')
-		return (1);
-	return (0);
-}
 
 int	ft_atoi(const char *nptr)
 {
