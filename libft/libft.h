@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:32:34 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/09 15:54:12 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/11 13:30:29 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -53,5 +54,8 @@ char	*ft_strdup(const char *s);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+int		ft_isspace(char c);
+int		ft_nbrlen(long n);
+char	*ft_totrim(char const *s1, int len, int start, int end);
 
 #endif
