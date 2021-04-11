@@ -6,42 +6,17 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 16:59:31 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/09 13:02:08 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/11 12:17:19 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_count_sep(char const *str, char c)
-{
-	int	count;
-
-	count = 0;
-	while (*str == c)
-		str++;
-	while (*str != '\0')
-	{
-		if (*str == c)
-		{
-			while (*str == c)
-				str++;
-			count++;
-		}
-		else
-			str++;
-	}
-	if (*(str - 1) == c)
-		return (count - 1);
-	return (count);
-}
 
 int	ft_chars_till_next_sep(char const *str, char c, int index)
 {
 	int	count;
 
 	count = 0;
-	while (str[index] == c)
-		index++;
 	while (str[index] != c && str[index] != '\0')
 	{
 		count++;
@@ -96,6 +71,7 @@ char	**ft_fill_array(char **aux, char const *s, char c)
 		}
 		aux[temp][j++] = s[i++];
 	}
+	aux[ft_count_words(s, c)] = NULL;
 	return (aux);
 }
 
@@ -103,13 +79,14 @@ char	**ft_split(char const *s, char c)
 {
 	char	**aux;
 
-	aux = (char **)malloc((ft_count_sep(s, c) + 2) * 8);
+	if (!s)
+		return (NULL);
+	aux = malloc((ft_count_words(s, c) + 8) * 13);
 	if (aux == NULL)
 		return (NULL);
 	aux[0] = (char *)malloc(ft_chars_till_next_sep(s, c, 0) + 1);
 	if (aux[0] == NULL)
 		return (NULL);
 	aux = ft_fill_array(aux, s, c);
-	aux[ft_count_words(s, c)] = NULL;
 	return (aux);
 }
