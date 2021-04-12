@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 16:59:31 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/11 13:38:28 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/12 14:25:09 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,6 @@ char	**ft_split(char const *s, char c)
 	if (aux[0] == NULL)
 		return (NULL);
 	aux = ft_fill_array(aux, s, c);
+	
 	return (aux);
 }

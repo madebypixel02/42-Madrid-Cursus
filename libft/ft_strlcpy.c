@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:08:56 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/11 13:40:44 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/12 11:44:46 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	if (src == NULL)
 		return (0);
 	size_src = ft_strlen(src);
+	if ((int)size < 0)
+		return (size_src);
 	if (size >= 2 && size_src != 0)
 	{
 		while (i < size - 1)
