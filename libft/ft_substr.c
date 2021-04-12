@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 16:53:56 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/11 10:31:33 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/12 20:16:15 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	s_len = ft_strlen(s);
 	i = 0;
+	if (len > s_len)
+		len = s_len;
 	if (start >= s_len)
 	{
 		substr = (char *)malloc(1);
