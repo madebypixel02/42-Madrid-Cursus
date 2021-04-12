@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:32:34 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/11 13:30:29 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/12 14:29:53 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,5 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_isspace(char c);
 int		ft_nbrlen(long n);
-char	*ft_totrim(char const *s1, int len, int start, int end);
 
 #endif
