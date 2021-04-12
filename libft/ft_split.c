@@ -6,24 +6,11 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 16:59:31 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/12 14:25:09 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/13 00:25:27 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_chars_till_next_sep(char const *str, char c, int index)
-{
-	int	count;
-
-	count = 0;
-	while (str[index] != c && str[index] != '\0')
-	{
-		count++;
-		index++;
-	}
-	return (count);
-}
 
 int	ft_count_words(const char *s, char c)
 {
@@ -48,46 +35,41 @@ int	ft_count_words(const char *s, char c)
 
 char	**ft_fill_array(char **aux, char const *s, char c)
 {
-	int	i;
-	int	j;
-	int	temp;
+	size_t	i;
+	size_t	j;
+	int		k;
+	size_t	s_len;
 
 	i = 0;
-	j = 0;
-	temp = 0;
-	while (s[i] == c)
-		i++;
-	while (s[i] != '\0')
+	k = 0;
+	s_len = ft_strlen(s);
+	while (s[i])
 	{
-		if (s[i] == c)
-		{
-			while (s[i] == c)
-				i++;
-			aux[temp++][j] = '\0';
-			aux[temp] = (char *)malloc(ft_chars_till_next_sep(s, c, i) + 1);
-			if (aux[temp] == NULL)
-				return (NULL);
-			j = 0;
-		}
-		aux[temp][j++] = s[i++];
+		while (s[i] == c && s[i] != '\0')
+			i++;
+		j = i;
+		while (s[i] != c && s[i] != '\0')
+			i++;
+		if (j >= s_len)
+			aux[k++] = "\0";
+		else
+			aux[k++] = ft_substr(s, j, i - j);
 	}
-	aux[ft_count_words(s, c)] = NULL;
 	return (aux);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**aux;
+	int		nwords;
 
 	if (!s)
 		return (NULL);
-	aux = malloc((ft_count_words(s, c) + 8) * 13);
+	nwords = ft_count_words(s, c);
+	aux = malloc((nwords + 1) * sizeof(char *));
 	if (aux == NULL)
 		return (NULL);
-	aux[0] = (char *)malloc(ft_chars_till_next_sep(s, c, 0) + 1);
-	if (aux[0] == NULL)
-		return (NULL);
 	aux = ft_fill_array(aux, s, c);
-	
+	aux[nwords] = NULL;
 	return (aux);
 }
