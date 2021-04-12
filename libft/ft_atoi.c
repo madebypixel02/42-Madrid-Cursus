@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:10:37 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/11 08:29:23 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/12 11:53:08 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	while (*nptr >= '0' && *nptr <= '9')
 	{
-		if (10 * n + (*nptr - '0') > max && sign == 1)
-			return (-1);
-		if (10 * n + (*nptr - '0') > max && sign == -1)
-			return (0);
 		n = 10 * n + (*nptr - '0');
+		if (n > max && sign == 1)
+			return (-1);
+		if (n > max + 1 && sign == -1)
+			return (0);
 		nptr++;
 	}
 	return (sign * n);
