@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/07 19:30:31 by aperez-b          #+#    #+#              #
-#    Updated: 2021/04/13 11:04:38 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/04/13 11:09:45 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,6 @@ SRC_B = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c		\
 ft_lstdelone_bonus.c ft_lstiter_bonus.c ft_lstlast_bonus.c ft_lstmap_bonus.c	\
 ft_lstnew_bonus.c ft_lstsize_bonus.c
 
-HEADERS = libft.h
 OBJ_M = $(SRC_M:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
 CC	= cc
@@ -41,7 +40,7 @@ bonus : $(OBJ_M) $(OBJ_B)
 	ar rc $(NAME) $(OBJ_B)
 
 $(OBJ_B): $(SRC_B)
-	$(CC) -c $(SRC_B)
+	$(CC) $(CFLAGS) -c $(SRC_B)
 
 so:
 	$(CC) -fPIC $(CFLAGS) $(SRC_M) $(OBJ_B) main.c
