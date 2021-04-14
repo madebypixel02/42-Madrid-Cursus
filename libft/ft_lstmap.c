@@ -6,31 +6,32 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 09:15:29 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/14 17:13:55 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/14 17:47:06 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstapply(t_list *lst, t_list *start, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lsapply(t_list *l, t_list *s, void *(*f)(void *), void (*d)(void *))
 {
-	if (lst)
+	if (l)
 	{
-		start = ft_lstnew(f(lst->content));
-		if (!start)
+		s = ft_lstnew(f(l->content));
+		if (!s)
 		{
-			del(start->content);
-			free(start->content);
+			ft_lstclear(&s, d);
+			return (NULL);
 		}
-		start->next = ft_lstapply(lst->next, start->next, f, del);
+		s->next = ft_lsapply(l->next, s->next, f, d);
 	}
-	return (start);
+	return (s);
 }
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*start;
 
-	start = ft_lstapply(lst, start, f, del);
+	start = NULL;
+	start = ft_lsapply(lst, start, f, del);
 	return (start);
 }
