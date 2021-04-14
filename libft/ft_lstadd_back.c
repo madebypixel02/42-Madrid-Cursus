@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/13 09:15:29 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/13 20:20:20 by aperez-b         ###   ########.fr       */
+/*   Created: 2021/04/13 09:02:48 by aperez-b          #+#    #+#             */
+/*   Updated: 2021/04/14 09:44:36 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*newlst;
+	t_list	*start;
 
-	newlst = (t_list *)malloc(ft_lstsize(lst));
-	newlst = lst;
-	while (newlst)
+	start = *lst;
+	if (*lst)
 	{
-		if (!newlst->content)
-			del(newlst->content);
-		newlst->content = f(newlst->content);
-		newlst = newlst->next;
+		while (start->next)
+			start = start->next;
+		start->next = new;
 	}
-	free(newlst);
-	return (lst);
+	else
+		*lst = new; 
 }
