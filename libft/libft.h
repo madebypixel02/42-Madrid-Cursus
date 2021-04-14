@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:32:34 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/14 13:58:14 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/14 20:01:37 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,6 @@ char	*ft_strdup(const char *s);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-int		ft_isspace(char c);
-int		ft_nbrlen(long n);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void*));
