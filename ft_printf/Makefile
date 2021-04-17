@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/04/17 11:07:16 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/04/17 11:47:43 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,11 +21,9 @@ SRC_B =
 OBJ_M = $(SRC_M:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
 
-all: $(NAME)
+all: $(NAME) $(LIBFT)
 
-$(NAME): $(OBJ_M)
-	make all -C $(LIBFT)
-	cp $(LIBFT)/$(LIBFT).a $(NAME)
+$(NAME): $(OBJ_M) $(LIBFT).a
 	$(AR) $(NAME) $(OBJ_M)
 
 $(OBJ_M): $(SRC_M)
@@ -34,8 +32,12 @@ $(OBJ_M): $(SRC_M)
 bonus: $(OBJ_B) $(OBJ_M)
 	$(AR) $(NAME) $(OBJ_B) $(OBJ_M)
 
-$(OBJ_M): $(SRC_B)
+$(OBJ_B): $(SRC_B)
 	$(CC) $(CFLAGS) -c $(SRC_B)
+
+$(LIBFT).a:
+	make all -C $(LIBFT)
+	cp $(LIBFT)/$(LIBFT).a $(NAME)
 
 clean:
 	make clean -C $(LIBFT)

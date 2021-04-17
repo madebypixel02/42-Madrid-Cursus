@@ -6,11 +6,14 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:24:33 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/17 09:47:06 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/17 11:21:43 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"
+
 int	ft_printf(const char *str, ...)
 {
-	
+	str = NULL;
+	return (0);
 }
