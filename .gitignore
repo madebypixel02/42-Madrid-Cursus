@@ -3,5 +3,5 @@ libftTester/
 a.out
 *.o
 *.so
-main.c
 *.a
+.DS_Store

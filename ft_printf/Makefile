@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/04/17 10:22:19 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/04/17 10:25:19 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ fclean: clean
 	$(RM) $(NAME)
 
 git:
-	git add .
+	git add ../.
 	git commit -m "$(m)"
 	git push
 
