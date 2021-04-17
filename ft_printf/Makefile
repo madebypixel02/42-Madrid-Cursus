@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/04/17 10:25:19 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/04/17 11:07:16 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 CC = gcc
 AR = ar rc
+LIBFT = libft
 NAME = libftprintf.a
 SRC_M = ft_printf.c
 SRC_B = 
@@ -23,6 +24,8 @@ OBJ_B = $(SRC_B:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ_M)
+	make all -C $(LIBFT)
+	cp $(LIBFT)/$(LIBFT).a $(NAME)
 	$(AR) $(NAME) $(OBJ_M)
 
 $(OBJ_M): $(SRC_M)
@@ -35,9 +38,11 @@ $(OBJ_M): $(SRC_B)
 	$(CC) $(CFLAGS) -c $(SRC_B)
 
 clean:
+	make clean -C $(LIBFT)
 	$(RM) $(OBJ_M) $(OBJ_B)
 
 fclean: clean
+	make fclean -C $(LIBFT)
 	$(RM) $(NAME)
 
 git:
@@ -47,4 +52,4 @@ git:
 
 re: fclean all
 
-.PHONY: all clean fclean bonus re
+.PHONY: all clean fclean bonus re git
