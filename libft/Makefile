@@ -67,10 +67,6 @@ bonus: $(OBJ_M) $(OBJ_B)
 $(OBJ_B): $(SRC_B)
 	$(CC) $(CFLAGS) -c $(SRC_M) $(SRC_B)
 
-so:
-	$(CC) -fPIC $(CFLAGS) $(SRC_M) $(OBJ_B) main.c
-	gcc -shared -o libft.so $(OBJ_M) $(OBJ_B)
-
 clean:
 	$(RM) $(OBJ_M) $(OBJ_B)
 
