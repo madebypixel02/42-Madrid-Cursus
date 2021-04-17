@@ -1,0 +1,50 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
+#    Updated: 2021/04/17 10:22:19 by aperez-b         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+CFLAGS = -Wall -Wextra -Werror
+RM = rm -f
+CC = gcc
+AR = ar rc
+NAME = libftprintf.a
+SRC_M = ft_printf.c
+SRC_B = 
+OBJ_M = $(SRC_M:.c=.o)
+OBJ_B = $(SRC_B:.c=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ_M)
+	$(AR) $(NAME) $(OBJ_M)
+
+$(OBJ_M): $(SRC_M)
+	$(CC) $(CFLAGS) -c $(SRC_M)
+
+bonus: $(OBJ_B) $(OBJ_M)
+	$(AR) $(NAME) $(OBJ_B) $(OBJ_M)
+
+$(OBJ_M): $(SRC_B)
+	$(CC) $(CFLAGS) -c $(SRC_B)
+
+clean:
+	$(RM) $(OBJ_M) $(OBJ_B)
+
+fclean: clean
+	$(RM) $(NAME)
+
+git:
+	git add .
+	git commit -m "$(m)"
+	git push
+
+re: fclean all
+
+.PHONY: all clean fclean bonus re
