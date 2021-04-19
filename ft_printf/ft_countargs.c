@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_countargs.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/17 09:11:41 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/19 19:45:16 by aperez-b         ###   ########.fr       */
+/*   Created: 2021/04/19 19:44:45 by aperez-b          #+#    #+#             */
+/*   Updated: 2021/04/19 19:47:11 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
+int	ft_countargs(char *str)
+{
+	int	count;
 
-# define LIBFTPRINTF_H
-
-# include "libft/libft.h"
-# include <stdarg.h>
-
-int	ft_printf(const char *str);
-int	ft_countargs(char *str);
-
-#endif
+	count = 0;
+	while (*str)
+	{
+		if (*str == '%' && *(str + 1) != '%')
+			count++;
+		str++;
+	}
+	return (count);
+}
