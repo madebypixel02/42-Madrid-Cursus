@@ -6,14 +6,14 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/04/17 11:47:43 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/04/20 09:48:10 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 CC = gcc
-AR = ar rc
+AR = ar rcs
 LIBFT = libft
 NAME = libftprintf.a
 SRC_M = ft_printf.c
