@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:09:50 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/16 08:32:02 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/20 09:44:24 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,5 @@ char	*ft_strrchr(const char *s, int c)
 			return ((char *)&s[last]);
 		last--;
 	}
-	if (s[last] == c_unsigned)
-		return ((char *)&s[last]);
 	return (NULL);
 }
