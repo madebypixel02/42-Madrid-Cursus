@@ -6,16 +6,19 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:02:06 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/07 18:30:01 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/21 10:32:35 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
 	if (s != NULL)
+	{
 		write(fd, s, ft_strlen(s));
+		return (ft_strlen(s));
+	}
 	else
-		return ;
+		return (0);
 }
