@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:37:37 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/21 14:31:16 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/21 15:20:44 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,20 @@ int	main(void)
 	char	*t = "0x12345678";
 	char	*u = "-0";
 
-	/*printf("%1s, %1s, %1s, %1s, %1s\n", n, o, p, q, r); //T180
-	printf("%2s, %2s, %2s, %2s, %2s\n", n, o, p, q, r); //T181
-	printf("%3s, %3s, %3s, %3s, %3s\n", n, o, p, q, r); //T182
-	printf("%4s, %4s, %4s, %4s, %4s\n", n, o, p, q, r); //T183
-	printf("%15s, %15s, %15s, %15s, %15s\n", n, o, p, q, r); //T184
-	printf("%16s, %16s, %16s, %16s, %16s\n", n, o, p, q, r); //T185
-	printf("%17s, %17s, %17s, %17s, %17s\n", n, o, p, q, r); //T186
-	printf("%.s, %.s, %.s, %.s, %.s\n", n, o, p, q, r); //T186
-	printf("%1.s, %1.s, %1.s, %1.s, %1.s\n", n, o, p, q, r); //T186
-	printf("%.s, %.s, %.s, %.s, %.s", n, o, p, q, r); //T186
-	printf("%1.s, %1.s, %1.s, %1.s, %1.s", n, o, p, q, r); //T186
-	printf("%.0s\n", n);
-	printf("%-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s", a, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);
-	printf("%20.*s, %.*s, %.*s, %.*s, %.*s, %.*s, %.*s, %.*s", -3, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);*/
+	ft_printf("%1s, %1s, %1s, %1s, %1s\n", n, o, p, q, r); //T180
+	ft_printf("%2s, %2s, %2s, %2s, %2s\n", n, o, p, q, r); //T181
+	ft_printf("%3s, %3s, %3s, %3s, %3s\n", n, o, p, q, r); //T182
+	ft_printf("%4s, %4s, %4s, %4s, %4s\n", n, o, p, q, r); //T183
+	ft_printf("%15s, %15s, %15s, %15s, %15s\n", n, o, p, q, r); //T184
+	ft_printf("%16s, %16s, %16s, %16s, %16s\n", n, o, p, q, r); //T185
+	ft_printf("%17s, %17s, %17s, %17s, %17s\n", n, o, p, q, r); //T186
+	ft_printf("%.s, %.s, %.s, %.s, %.s\n", n, o, p, q, r); //T186
+	ft_printf("%1.s, %1.s, %1.s, %1.s, %1.s\n", n, o, p, q, r); //T186
+	ft_printf("%.s, %.s, %.s, %.s, %.s", n, o, p, q, r); //T186
+	ft_printf("%1.s, %1.s, %1.s, %1.s, %1.s", n, o, p, q, r); //T186
+	ft_printf("%.0s\n", n);
+	ft_printf("%-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s", a, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);
+	ft_printf("%20.*s, %.*s, %.*s, %.*s, %.*s, %.*s, %.*s, %.*s", -3, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);
 	//printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X", i, j, k, l, m, n, c, c, j, j, j)); //T2
 	//printf("%0i, %0d, %0d, %0d, %0d, %0d, %0d, %0d", i, j, k, l, m, c, e, d); //T3
 	/*printf("%1i, %1d, %1d, %1d, %1d, %1d, %1d, %1d", i, j, k, l, m, c, e, d); //T4
@@ -109,6 +109,6 @@ int	main(void)
 	printf("%1.s, %1.s, %1.s, %1.s, %1.s", n, o, p, q, r); //T186
 	printf("%.0s\n", n);
 	printf("%-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s", a, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);*/
-	printf("%d\n", printf("%-*.1s\n", 9, "string"));
-
+	//printf("%d\n", ft_printf("%s\n", "string"));
+	
 }

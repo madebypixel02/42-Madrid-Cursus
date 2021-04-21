@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 10:26:21 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/21 15:00:27 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/21 15:18:10 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ int	ft_print_format(t_format f, va_list ap)
 		f.width = -f.width;
 		f.minus = 1;
 	}
+	if (f.precision < 0)
+		f.precision = -1;
 		
 	//count += ft_print_c_pct(format, ap);
 	count += ft_print_s(f, ap);

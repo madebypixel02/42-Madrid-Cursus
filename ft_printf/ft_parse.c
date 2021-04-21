@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/21 14:30:34 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/21 15:17:47 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_parse(char *str, va_list	ap)
 	new_format = ft_newformat();
 	if (ft_strchr(str, '-'))
 		new_format.minus = 1;
-	while (*(str + 1) && *str != '.')
+	while (*str && *str != '.')
 	{
 		if (*str == '*' && !new_format.width)
 			new_format.width = va_arg(ap, int);
@@ -27,14 +27,14 @@ int	ft_parse(char *str, va_list	ap)
 			new_format.width = ft_atoi(str);
 		str++;
 	}
-	str++;
+	if (*str)
+		str++;
 	while (*str)
 	{
 		if (*str == '*' && new_format.precision == -1)
 			new_format.precision = va_arg(ap, int);
 		else if (new_format.precision == -1)
 			new_format.precision = ft_atoi(str);
-		//printf("Precision: %d\n", new_format.precision);
 		str++;
 	}
 	new_format.specfier = *(str - 1);
