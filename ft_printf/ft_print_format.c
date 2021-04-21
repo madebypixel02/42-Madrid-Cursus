@@ -6,16 +6,16 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 10:26:21 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/21 15:18:10 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/21 16:26:46 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-//int	ft_print_c_pct(t_format f, va_list ap);
 int	ft_print_s(t_format f, va_list ap)
 {
 	char	*string;
+	char	c;
 	int		count;
 	int		len;
 

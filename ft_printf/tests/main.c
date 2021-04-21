@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:37:37 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/21 15:20:44 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/21 15:34:51 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(void)
 	char	*t = "0x12345678";
 	char	*u = "-0";
 
-	ft_printf("%1s, %1s, %1s, %1s, %1s\n", n, o, p, q, r); //T180
+	/*ft_printf("%1s, %1s, %1s, %1s, %1s\n", n, o, p, q, r); //T180
 	ft_printf("%2s, %2s, %2s, %2s, %2s\n", n, o, p, q, r); //T181
 	ft_printf("%3s, %3s, %3s, %3s, %3s\n", n, o, p, q, r); //T182
 	ft_printf("%4s, %4s, %4s, %4s, %4s\n", n, o, p, q, r); //T183
@@ -49,7 +49,7 @@ int	main(void)
 	ft_printf("%1.s, %1.s, %1.s, %1.s, %1.s", n, o, p, q, r); //T186
 	ft_printf("%.0s\n", n);
 	ft_printf("%-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s", a, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);
-	ft_printf("%20.*s, %.*s, %.*s, %.*s, %.*s, %.*s, %.*s, %.*s", -3, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);
+	ft_printf("%20.*s, %.*s, %.*s, %.*s, %.*s, %.*s, %.*s, %.*s", -3, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);*/
 	//printf("%i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X", i, j, k, l, m, n, c, c, j, j, j)); //T2
 	//printf("%0i, %0d, %0d, %0d, %0d, %0d, %0d, %0d", i, j, k, l, m, c, e, d); //T3
 	/*printf("%1i, %1d, %1d, %1d, %1d, %1d, %1d, %1d", i, j, k, l, m, c, e, d); //T4
@@ -83,7 +83,7 @@ int	main(void)
 	printf("%-1.1i, %-1.1d, %-1.1d, %-1.1d, %-1.1d, %-1.1d, %-1.1d, %-1.1d", i, j, k, l, m, c, e, d); //T32
 	printf("%1.0i, %1.0d, %1.0d, %1.0d, %1.0d, %1.0d, %1.0d, %1.0d", i, j, k, l, m, c, e, d); //T33
 	printf("%*.i, %*d, %*d, %*d, %*d, %*d, %*d, %*d", a, i, a, j, a, k, a, l, a, m, a, c, a, e, a, d);*/
-	//printf("%c, %-c, %12c, %-3c, %-1c, %1c, %.*c", 0, 0, 0, 0, 0, 0, 0, '1');
+	ft_printf("%c, %-c, %12c, %-3c, %-1c, %1c, %.*c", 0, 0, 0, 0, 0, 0, 0, '1');
 	//printf("%x\n", j);
 	/*printf("%0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X", a, i, a, i, a, i, a, j, a, j, a, j, a, k, a, k, a, k, a, l, a, l, a, l, a, m, a, m, a, m, a, c, a, c, a, c, a, d, a, d, a, d, a, e, a, e, a, e);
 	printf("%-*u, %-*x, %-*X, %-*u, %-*x, %-*X, %-*u, %-*x, %-*X, %-*u, %-*x, %-*X, %-*u, %-*x, %-*X, %-*u, %-*x, %-*X, %-*u, %-*x, %-*X, %-*u, %-*x, %-*X", a, i, a, i, a, i, a, j, a, j, a, j, a, k, a, k, a, k, a, l, a, l, a, l, a, m, a, m, a, m, a, c, a, c, a, c, a, d, a, d, a, d, a, e, a, e, a, e);
@@ -96,19 +96,6 @@ int	main(void)
 		printf("%d\n", ft_strchr(SPECIFIERS, *str) != 0);
 		str++;
 	}*/
-	/*printf("%1s, %1s, %1s, %1s, %1s\n", n, o, p, q, r); //T180
-	ft_printf("%2s, %2s, %2s, %2s, %2s\n", n, o, p, q, r); //T181
-	printf("%3s, %3s, %3s, %3s, %3s\n", n, o, p, q, r); //T182
-	printf("%4s, %4s, %4s, %4s, %4s\n", n, o, p, q, r); //T183
-	printf("%15s, %15s, %15s, %15s, %15s\n", n, o, p, q, r); //T184
-	printf("%16s, %16s, %16s, %16s, %16s\n", n, o, p, q, r); //T185
-	printf("%17s, %17s, %17s, %17s, %17s\n", n, o, p, q, r); //T186
-	printf("%.s, %.s, %.s, %.s, %.s\n", n, o, p, q, r); //T186
-	printf("%1.s, %1.s, %1.s, %1.s, %1.s\n", n, o, p, q, r); //T186
-	printf("%.s, %.s, %.s, %.s, %.s", n, o, p, q, r); //T186
-	printf("%1.s, %1.s, %1.s, %1.s, %1.s", n, o, p, q, r); //T186
-	printf("%.0s\n", n);
-	printf("%-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s, %-*s", a, n, a, o, a, p, a, q, a, r, a, s, a, t, a, u);*/
 	//printf("%d\n", ft_printf("%s\n", "string"));
 	
 }
