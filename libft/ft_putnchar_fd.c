@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnchar_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/05 17:02:06 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/21 12:37:31 by aperez-b         ###   ########.fr       */
+/*   Created: 2021/04/05 17:01:29 by aperez-b          #+#    #+#             */
+/*   Updated: 2021/04/21 11:44:04 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstr_fd(char *s, int fd)
+int	ft_putnchar_fd(char c, int fd, int n)
 {
-	if (s != NULL)
-		return ((int)write(fd, s, ft_strlen(s)));
-	return (0);
+	int	count;
+
+	count = 0;
+	while (n-- > 0)
+		count += (int)write(fd, &c, 1);
+	return (count);
 }
