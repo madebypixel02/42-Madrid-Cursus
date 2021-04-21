@@ -6,26 +6,11 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:00:03 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/14 20:37:49 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/21 20:18:35 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_nbrlen(long n)
-{
-	int	len;
-
-	len = 0;
-	if (n == 0)
-		len++;
-	while (n != 0)
-	{
-		len++;
-		n /= 10;
-	}
-	return (len);
-}
 
 char	*ft_fill_str(char *str, int len, int n, int n_bak)
 {
