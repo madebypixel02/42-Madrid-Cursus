@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_countargs.c                                     :+:      :+:    :+:   */
+/*   ft_format.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/19 19:44:45 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/19 19:47:11 by aperez-b         ###   ########.fr       */
+/*   Created: 2021/04/21 08:52:18 by aperez-b          #+#    #+#             */
+/*   Updated: 2021/04/21 14:28:32 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_countargs(char *str)
-{
-	int	count;
+#include "libftprintf.h"
 
-	count = 0;
-	while (*str)
-	{
-		if (*str == '%' && *(str + 1) != '%')
-			count++;
-		str++;
-	}
-	return (count);
+t_format	ft_newformat(void)
+{
+	t_format	newformat;
+
+	newformat.minus = 0;
+	newformat.width = 0;
+	newformat.precision = -1;
+	newformat.specfier = 0;
+	return (newformat);
 }
