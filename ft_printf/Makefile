@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/04/22 10:05:26 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/04/22 19:26:41 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ AR = ar rcs
 LIBFT = libft
 NAME = libftprintf.a
 SRC_M = ft_printf.c ft_format.c ft_parse.c	\
-ft_print_format.c ft_print_nbrs.c
+ft_print_chars.c ft_print_nbrs.c			
+#ft_print_hex.c
 SRC_B = 
 OBJ_M = $(SRC_M:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
@@ -39,6 +40,9 @@ $(OBJ_B): $(SRC_B)
 $(LIBFT).a:
 	make all -C $(LIBFT)
 	cp $(LIBFT)/$(LIBFT).a $(NAME)
+
+test: $(NAME) $(LIBFT)/$(LIBFT).a
+	gcc $(NAME) tests/main.c && ./a.out | cat -e
 
 clean:
 	make clean -C $(LIBFT)
