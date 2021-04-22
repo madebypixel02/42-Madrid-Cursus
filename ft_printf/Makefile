@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/04/21 12:47:28 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/04/22 10:05:26 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ CC = gcc
 AR = ar rcs
 LIBFT = libft
 NAME = libftprintf.a
-SRC_M = ft_printf.c ft_format.c ft_parse.c ft_print_format.c
+SRC_M = ft_printf.c ft_format.c ft_parse.c	\
+ft_print_format.c ft_print_nbrs.c
 SRC_B = 
 OBJ_M = $(SRC_M:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
