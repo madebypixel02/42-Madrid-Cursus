@@ -6,21 +6,23 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 20:16:39 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/21 20:17:38 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/28 09:33:02 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_nbrlen(long n)
+int	ft_nbrlen(long n, int base)
 {
 	int	len;
 
 	len = 0;
+	if (!base)
+		base = 10;
 	if (n == 0)
-		len++;
+		return (1);
 	while (n != 0)
 	{
 		len++;
-		n /= 10;
+		n /= base;
 	}
 	return (len);
 }
