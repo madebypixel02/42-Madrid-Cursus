@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_format.c                                        :+:      :+:    :+:   */
+/*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/21 08:52:18 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/28 13:38:54 by aperez-b         ###   ########.fr       */
+/*   Created: 2021/04/28 13:01:12 by aperez-b          #+#    #+#             */
+/*   Updated: 2021/04/28 13:02:06 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-
-t_format	ft_newformat(void)
+int	ft_max(int a, int b)
 {
-	t_format	newformat;
-
-	newformat.minus = 0;
-	newformat.plus = 0;
-	newformat.width = 0;
-	newformat.width_specified = 0;
-	newformat.precision = 0;
-	newformat.precision_specified = 0;
-	newformat.specfier = 0;
-	newformat.zero = 0;
-	return (newformat);
+	if (a >= b)
+		return (a);
+	return (b);
 }

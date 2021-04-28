@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:11:41 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/28 09:13:38 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/28 13:39:04 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_format
 	int		precision;
 	int		precision_specified;
 	char	specfier;
+	int		zero;
 }					t_format;
 
 # define FLAGS		"-0.*"
