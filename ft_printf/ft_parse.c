@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/28 09:13:51 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/28 10:53:19 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,21 @@ t_format	ft_parse_precision(char *str, va_list	ap, t_format f)
 {
 	while (*str)
 	{
+		if (*str == '-')
+		{
+			f.precision = 0;
+			f.precision_specified = 1;
+			f.width++;
+			break ;
+		}
 		if ((ft_isdigit(*str) || *str == '*') && !f.precision_specified)
 		{
 			if (*str == '*')
 				f.precision = va_arg(ap, int);
 			else
 				f.precision = ft_atoi(str);
-			f.precision_specified = 1;
 		}
+		f.precision_specified = 1;
 		str++;
 	}
 	return (f);

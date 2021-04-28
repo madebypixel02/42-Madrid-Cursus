@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:37:37 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/28 09:28:11 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/28 11:16:29 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@ int	main(void)
 	//ft_printf("%2i, %2d, %2d, %2d, %2d, %2d, %2d, %2d", i, j, k, l, m, c, e, d); //T5
 	//printf("%3i, %3d, %3d, %3d, %3d, %3d, %3d, %3d", i, j, k, l, m, c, e, d); //T6
 	//printf("%4i, %4d, %4d, %4d, %4d, %4d, %4d, %4d", i, j, k, l, m, c, e, d); //T7
-	printf("%*.*i, %5d, %5d, %5d, %5d, %5d, %5d, %5d\n", 2, -4, 2, j, k, l, m, c, e, d); //T8
-	ft_printf("%*.*i, %5d, %5d, %5d, %5d, %5d, %5d, %5d\n", 2, -4, 2, j, k, l, m, c, e, d); //T8
+	//printf("%*.*i, %5d, %5d, %5d, %5d, %5d, %5d, %5d\n", 2, -3, 2, j, k, l, m, c, e, d); //T8
+	//............ft_printf("%*.*i, %5d, %5d, %5d, %5d, %5d, %5d, %5d\n", 2, -3, 2, j, k, l, m, c, e, d); //T8
 	//printf("%6i, %6d, %6d, %6d, %6d, %6d, %6d, %6d", i, j, k, l, m, c, e, d); //T9
 	//printf("%7i, %7d, %7d, %7d, %7d, %7d, %7d, %7d", i, j, k, l, m, c, e, d); //T10
 	//ft_printf("%8i, %8d, %8d, %8d, %8d, %8d, %8d, %8d\n", i, j, k, l, m, c, e, d); //T11
@@ -80,7 +80,8 @@ int	main(void)
 	//ft_printf("%-01i, %-01d, %-01d, %-01d, %-01d, %-01d, %-01d, %-01d", i, j, k, l, m, c, e, d); //T27
 	//ft_printf("%-1.i, %-1.d, %-1.d, %-1.d, %-1.d, %-1.d, %-1d, %-1d", i, j, k, l, m, c, e, d); //T28
 	//ft_printf("%-.1i, %-.1d, %-.1d, %-.1d, %-.1d, %-.1d, %-.1d, %-.1d", i, j, k, l, m, c, e, d); //T29
-	//ft_printf("%-0.1i, %-0.1d, %-0.1d, %-0.1d, %-0.1d, %-0.1d, %-0.1d, %-0.1d", i, j, k, l, m, c, e, d); //T30
+	printf("%-0.1i, %-0.1d, %-0.1d, %4.-3d, %-0.1d, %-0.1d, %-0.1d, %-0.1d\n", i, j, k, 2, m, c, e, d); //T30
+	//ft_printf("%-0.1i, %-0.1d, %-0.1d, %-0.-*d, %-0.1d, %-0.1d, %-0.1d, %-0.1d\n", i, j, k, 1, l, m, c, e, d); //T30
 	//ft_printf("%-1.0i, %-1.0d, %-1.0d, %-1.0d, %-1.0d, %-1.0d, %-1.0d, %-1.0d", i, j, k, l, m, c, e, d); //T31
 	//printf("%-1.1i, %-1.1d, %-1.1d, %-1.1d, %-1.1d, %-20.16d, %-1.1d, %-1.1d", i, j, k, l, m, c, e, d); //T32
 	//printf("Len: %d\n", ft_printf("%1.0i, %5.10d, %1.12d, %1.0d, %1.0d, %1.0d, %1.30d, %1.0d\n", i, j, k, l, m, c, e, d)); //T33
@@ -90,7 +91,6 @@ int	main(void)
 	/*printf("%0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X, %0*u, %0*x, %0*X", a, i, a, i, a, i, a, j, a, j, a, j, a, k, a, k, a, k, a, l, a, l, a, l, a, m, a, m, a, m, a, c, a, c, a, c, a, d, a, d, a, d, a, e, a, e, a, e);
 	printf("%-*u, %-*x, %-*X, %-*u, %-*x, %-*X, %-*u, %-*x, %-*X, %-*u, %-*x, %-*X, %-*u, %-*x, %-*X, %-*u, %-*x, %-*X, %-*u, %-*x, %-*X, %-*u, %-*x, %-*X", a, i, a, i, a, i, a, j, a, j, a, j, a, k, a, k, a, k, a, l, a, l, a, l, a, m, a, m, a, m, a, c, a, c, a, c, a, d, a, d, a, d, a, e, a, e, a, e);
 	printf("%5.*u, %.*x, %.*X, %.*u, %.*x, %.*X, %.*u, %.*x, %.*X, %.*u, %.*x, %.*X, %.*u, %.*x, %.*X, %.*u, %.*x, %.*X, %.*u, %.*x, %.*X, %.*u, %.*x, %.*X", -3, i, a, i, a, i, a, j, a, j, a, j, a, k, a, k, a, k, a, l, a, l, a, l, a, m, a, m, a, m, a, c, a, c, a, c, a, d, a, d, a, d, a, e, a, e, a, e);*/
-<<<<<<< HEAD
 	/*char *str = "%-42303s\n";
 	while (*str)
 	{
@@ -102,6 +102,4 @@ int	main(void)
 	//printf("%d\n", ft_printf("%s\n", "string"));
 	//printf("%s", ft_itoa(-2147483648));
 	//printf("%.d\n", 123);
-=======
->>>>>>> ea223d94f4b2fc4f9022e90f4ab4548e027205f6
 }
