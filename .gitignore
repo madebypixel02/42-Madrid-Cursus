@@ -7,3 +7,4 @@ a.out
 *.a
 .DS_Store
 tempCodeRunnerFile.c
+*.swp
