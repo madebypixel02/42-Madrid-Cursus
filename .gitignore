@@ -1,8 +1,9 @@
 libft-unit-test/
 libftTester/
-printfTester
+printfTester/
 a.out
 *.o
 *.so
 *.a
 .DS_Store
+tempCodeRunnerFile.c

@@ -1,1 +1,0 @@
-count += ft_putnchar_fd('0', 1, f.precision - len + s
