@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/04/28 09:25:16 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/04/29 10:32:08 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,9 +41,9 @@ $(LIBFT).a:
 	make all -C $(LIBFT)
 	cp $(LIBFT)/$(LIBFT).a $(NAME)
 
-test: $(NAME)
+test: all
 	$(CC) -c tests/main.c
-	$(CC) $(NAME) main.o && ./a.out | cat -e
+	$(CC) main.o $(NAME) && ./a.out | cat -e
 	$(RM) main.o
 
 clean:
