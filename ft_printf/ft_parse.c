@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/28 13:43:17 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/30 12:09:48 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 			f.minus = 1;
 		if (*str == '+')
 			f.plus = 1;
-		if (*str == '*' && *(str - 1) == '0')
+		if (*str == '0' && !ft_isdigit(*(str - 1)))
 			f.zero = 1;
 		else if ((ft_isdigit(*str) || *str == '*') && !f.width_specified)
 		{
-			if (ft_strchr(str, '*'))
+			if (*str == '*')
 				f.width = va_arg(ap, int);
 			else
 				f.width = ft_atoi(str);
