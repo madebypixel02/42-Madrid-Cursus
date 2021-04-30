@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:37:37 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/30 13:38:46 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/30 13:44:54 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,5 +182,8 @@ int	main(void)
         //printf("B%-9.2d\n", UINT_MAX);
         //ft_printf("%-9.10d\n", UINT_MAX);
         //printf("%-9.10d\n", UINT_MAX);
- 
+	//ft_printf("%03d\n", 0);
+	//printf("%03d\n", 0);
+	//ft_printf("A%0*d\n", -7, -54); 
+	//printf("B%0*d\n", -7, -54); 
 }
