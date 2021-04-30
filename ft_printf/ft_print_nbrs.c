@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 09:58:43 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/30 12:47:46 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/04/30 14:33:55 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,17 @@ int	ft_print_d_i(t_format f, va_list ap)
 	}
 	if ((f.precision <= 0 || f.precision < len))
 		f.precision = len;
-	count += ft_putnchar_fd('-', 1, (int)(sign && f.zero));
+	count += ft_putnchar_fd('-', 1, (sign && f.zero && f.precision > f.width));
 	if (!f.minus && f.width > f.precision && !f.precision_specified && f.zero)
 		count += ft_putnchar_fd('0', 1, f.width - f.precision);
 	else if (!f.minus && f.width > f.precision)
-		count += ft_putnchar_fd(' ', 1, f.width - f.precision);
-	count += ft_putnchar_fd('-', 1, (int)(sign && !f.zero));
+		count += ft_putnchar_fd(' ', 1, f.width - f.precision - sign);
+	count += ft_putnchar_fd('-', 1, ((sign && !f.zero) || f.precision < f.width));
 	if (f.precision > len)
 		count += ft_putnchar_fd('0', 1, f.precision - len + sign);
 	count +=  ft_putstr_fd(&nbr[sign], 1);
 	if (f.minus && f.width > f.precision)
-		count += ft_putnchar_fd(' ', 1, f.width - f.precision - sign);
+		count += ft_putnchar_fd(' ', 1, f.width - f.precision - (sign && !f.zero));
 	free(nbr);
 	return (count);
 }
