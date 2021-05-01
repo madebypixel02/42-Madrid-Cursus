@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_uitoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:00:03 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/01 10:48:05 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 11:41:14 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 static char	*ft_allocate(char *str, int len, unsigned int n, unsigned int n_bak)
 {
-	if (n >= 0)
-	{
-		str = (char *)malloc(len + 1);
-		if (str == NULL)
-			return (NULL);
-	}
+	str = (char *)malloc(len + 1);
+	if (str == NULL)
+		return (NULL);
 	str[len] = '\0';
 	while (len-- > 0)
 	{
-		if (len > 0 || n_bak >= 0)
+		if (len > 0 || n_bak == 0)
 			str[len] = (n % 10) + '0';
 		n /= 10;
 	}
