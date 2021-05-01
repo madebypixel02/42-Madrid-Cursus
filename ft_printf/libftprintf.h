@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:11:41 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/30 21:04:29 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 09:50:31 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@ typedef struct s_format
 	int		width_specified;
 	int		precision;
 	int		precision_specified;
-	char	specfier;
+	char	specifier;
 	int		zero;
 }					t_format;
 
 # define INT_MIN -2147483648
+# define UINT_MAX 4294967295
 
 # define FLAGS		"-0.*"
 # define SPECIFIERS	"cspdiuxX%"

@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 09:58:43 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/30 21:08:30 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 09:42:55 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,10 @@ int	ft_print_d_i(t_format f, va_list ap)
 	count = 0;
 	n = va_arg(ap, int);
 	sign = (n < 0 && n != INT_MIN);
-	if (n < 0)
+	if (n < 0 && f.specifier != 'u')
 		n *= -1;
+	else if (n < 0)
+		n += UINT_MAX;
 	nbr = ft_itoa(n);
 	len = ft_strlen(nbr);
 	count += ft_print_nbr(f, nbr, len, sign);

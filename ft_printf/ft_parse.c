@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/30 12:09:48 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 09:50:34 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,6 @@ int	ft_parse(char *str, va_list	ap)
 			str++;
 	}
 	if (ft_strchr(SPECIFIERS, *(str - 1)))
-		new_format.specfier = *(str - 1);
+		new_format.specifier = *(str - 1);
 	return (ft_print_format(new_format, ap));
 }
