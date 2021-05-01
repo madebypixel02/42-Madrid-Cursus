@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:32:34 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/28 13:02:59 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 10:46:28 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *nptr);
 char	*ft_itoa(int n);
+char	*ft_uitoa(unsigned int n);
 int		ft_putchar_fd(char c, int fd);
 int		ft_putnchar_fd(char c, int fd, int n);
 int		ft_putendl_fd(char *s, int fd);
