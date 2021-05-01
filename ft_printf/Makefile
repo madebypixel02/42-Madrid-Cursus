@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/05/01 11:00:34 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/05/01 11:23:22 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ RM = rm -f
 CC = gcc
 AR = ar rcs
 LIBFT = libft
-NAME = libftprintf.a
+NAME = ft_printf.a
 SRC_M = ft_printf.c ft_format.c ft_parse.c	\
 ft_print_chars.c ft_print_nbrs.c			\
 ft_print_hex.c
