@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:11:41 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/01 11:27:53 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 13:15:21 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ typedef struct s_format
 # define SPECIFIERS	"cspdiuxX%"
 
 # define HEXALOW	"0123456789abcdef"
-# define HEXAUPP	"0123456789ABCDEF"
+# define HEXAUP	"0123456789ABCDEF"
 
 int			ft_printf(const char *str, ...);
 t_format	ft_newformat(void);

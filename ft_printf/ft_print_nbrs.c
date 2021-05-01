@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 09:58:43 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/01 11:25:53 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 13:40:12 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,3 @@ int	ft_print_d_i_u(t_format f, va_list ap)
 	free(nbr);
 	return (count);
 }
-
