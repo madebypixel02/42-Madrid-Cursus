@@ -1,6 +1,7 @@
 libft-unit-test/
 libftTester/
 printfTester/
+42TESTERS-PRINTF/
 a.out
 *.o
 *.so
