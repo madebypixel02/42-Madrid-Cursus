@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:24:33 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/01 09:50:40 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 11:04:08 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,9 @@ int	ft_print_format(t_format f, va_list ap)
 		count = ft_print_c_pct(f, ap);
 	if (f.specifier == 's')
 		count = ft_print_s(f, ap);
-	
-	//count = ft_print_p(f, ap);
-	if (f.specifier == 'd' || f.specifier == 'i')
-	count = ft_print_d_i(f, ap);
-	//count = ft_print_u(f, ap);
-	//count = ft_print_hex(f, ap, 1);
-	//count = ft_print_hex(f, ap, 0);
+	if (f.specifier == 'd' || f.specifier == 'i' || f.specifier == 'u')
+		count = ft_print_d_i_u(f, ap);
+	if (f.specifier == 'p' || f.specifier == 'X' || f.specifier == 'x')
+		count = ft_print_hex(f, ap);
 	return (count);
 }

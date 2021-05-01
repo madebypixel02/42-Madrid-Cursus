@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 09:58:43 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/01 09:42:55 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 10:51:28 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,29 +34,26 @@ static int	ft_print_nbr(t_format f, char *nbr, int len, int sign)
 	return (count);
 }
 
-int	ft_print_d_i(t_format f, va_list ap)
+int	ft_print_d_i_u(t_format f, va_list ap)
 {
 	char	*nbr;
-	long	n;
+	int		n;
 	int		count;
 	int		len;
 	int		sign;
 
 	count = 0;
 	n = va_arg(ap, int);
-	sign = (n < 0 && n != INT_MIN);
+	sign = (n < 0 && n != INT_MIN && f.specifier != 'u');
 	if (n < 0 && f.specifier != 'u')
 		n *= -1;
-	else if (n < 0)
-		n += UINT_MAX;
-	nbr = ft_itoa(n);
+	if (n < 0 && f.specifier == 'u')
+		nbr = ft_uitoa(n + UINT_MAX + 1);
+	else
+		nbr = ft_itoa(n);
 	len = ft_strlen(nbr);
 	count += ft_print_nbr(f, nbr, len, sign);
 	free(nbr);
 	return (count);
 }
 
-/*int	ft_print_u(t_format f, va_list ap)
-{
-	return (0);
-}*/
