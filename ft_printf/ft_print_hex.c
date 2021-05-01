@@ -6,20 +6,20 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 10:26:21 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/01 13:37:11 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/01 13:52:47 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_recursive_hex(t_format f, size_t n)
+static int	ft_recursive_hex(t_format f, size_t n, size_t n_bak)
 {
 	int		count;
 	int		remainder;
 	char	character;
 
 	count = 0;
-	if (n > 0)
+	if (n > 0 || !n_bak)
 	{
 		remainder = n % 16;
 		if (f.specifier != 'X')
@@ -27,7 +27,8 @@ static int	ft_recursive_hex(t_format f, size_t n)
 		else
 			character = HEXAUP[remainder];
 		n /= 16;
-		count += ft_recursive_hex(f, n);
+		n_bak = 1;
+		count += ft_recursive_hex(f, n, n_bak);
 		count += ft_putchar_fd(character, 1);
 	}
 	return (count);
@@ -55,7 +56,7 @@ int	ft_print_hex(t_format f, va_list ap)
 		count += ft_putnchar_fd(' ', 1, f.width - f.precision);
 	count += write(1, "0x", 2 * (f.specifier == 'p' && !f.zero));
 	count += ft_putnchar_fd('0', 1, f.precision - len);
-	count += ft_recursive_hex(f, n);
+	count += ft_recursive_hex(f, n, n);
 	if (f.minus && f.width > f.precision)
 		count += ft_putnchar_fd(' ', 1, f.width - f.precision);
 	return (count);
