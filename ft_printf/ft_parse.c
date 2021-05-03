@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/03 16:33:33 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/03 17:19:58 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 {
-	while (!ft_strchr(SPECIFIERS, *str) && *str != '.')
+	while (*str != '.' && !ft_strchr(SPECIFIERS, *str))
 	{
 		if (*str == '-')
 			f.minus = 1;
@@ -44,13 +44,13 @@ t_format	ft_parse_precision(char *str, va_list ap, t_format f)
 {
 	while (!ft_strchr(SPECIFIERS, *str))
 	{
-		if (*str == '-')
+		/*f (*str == '-')
 		{
 			f.precision = 0;
 			f.precision_specified = 1;
 			f.width++;
 			break ;
-		}
+		}*/
 		if ((ft_isdigit(*str) || *str == '*') && !f.precision_specified)
 		{
 			if (*str == '*')
@@ -69,14 +69,15 @@ int	ft_parse(char *str, va_list	ap)
 	t_format	new_format;
 
 	new_format = ft_parse_width(str, ap, ft_newformat());
-	//printf("%s\n", str);
 	while (!ft_strchr(SPECIFIERS, *str) && *str != '.')
 		str++;
 	if (*str == '.')
 	{
 		str++;
 		new_format = ft_parse_precision(str, ap, new_format);
+		while (!ft_strchr(SPECIFIERS, *str))
+			str++;
 	}
-	new_format.specifier = ft_strchr(SPECIFIERS, *str);
+	new_format.specifier = *str;
 	return (ft_print_format(new_format, ap));
 }
