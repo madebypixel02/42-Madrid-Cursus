@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/01 11:26:14 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/03 11:35:49 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 			f.minus = 1;
 		if (*str == '+')
 			f.plus = 1;
-		if (*str == '0' && !ft_isdigit(*(str - 1)))
+		if (*str == '0')
 			f.zero = 1;
 		else if ((ft_isdigit(*str) || *str == '*') && !f.width_specified)
 		{
@@ -67,7 +67,11 @@ t_format	ft_parse_precision(char *str, va_list	ap, t_format f)
 int	ft_parse(char *str, va_list	ap)
 {
 	t_format	new_format;
+	char		*ptr;
 
+	if (!str)
+		return (0);
+	ptr = str;
 	new_format = ft_parse_width(str, ap, ft_newformat());
 	while (*str && *str != '.')
 		str++;
@@ -80,5 +84,6 @@ int	ft_parse(char *str, va_list	ap)
 	}
 	if (ft_strchr(SPECIFIERS, *(str - 1)))
 		new_format.specifier = *(str - 1);
+	free(ptr);
 	return (ft_print_format(new_format, ap));
 }

@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:24:33 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/01 13:01:51 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/03 11:31:40 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,27 @@
 
 int	ft_printf(const char *str, ...)
 {
-	int		count;
-	char	*ptr;
+	int	count;
 	char	*substr;
+	int	i;
+	int	j;
 	va_list	ap;
 
 	count = 0;
 	va_start(ap, str);
-	while (*str)
+	j = -1;
+	while (str[++j])
 	{
-		if (*str == '%')
+		if (str[j] == '%')
 		{
-			str++;
-			ptr = (char *)str;
-			while (!ft_strchr(SPECIFIERS, *str) && *str)
-				str++;
-			substr = ft_substr(ptr, 0, str - ptr + 1);
+			i = ++j;
+			while (!ft_strchr(SPECIFIERS, str[j]) && str[j])
+				j++;
+			substr = ft_substr(str, i, j - i + 1);
 			count += ft_parse(substr, ap);
-			free(substr);
 		}
 		else
-			count += ft_putchar_fd(*str, 1);
-		str++;
+			count += ft_putchar_fd(str[j], 1);
 	}
 	va_end(ap);
 	return (count);
