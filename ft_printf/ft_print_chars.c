@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 10:43:07 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/04 09:17:43 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/04 22:07:18 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,17 @@ int	ft_print_s(t_format f, va_list ap)
 	char	*string;
 	int	count;
 	int	len;
+	int	has_malloc;
 
 	count = 0;
+	has_malloc = 0;
 	string = va_arg(ap, char *);
+	if (!string)
+	{
+		string = malloc(sizeof(char) * 7);
+		has_malloc = 1;
+		ft_strlcpy(string, "(null)", 7);
+	}
 	len = ft_strlen(string);
 	if (!f.dot || f.precision > len)
 		f.precision = len;
@@ -47,5 +55,7 @@ int	ft_print_s(t_format f, va_list ap)
 	count += ft_putstrn_fd(string, 1, f.precision);
 	if (f.minus && f.width - f.precision > 0)
 		count += ft_putnchar_fd(' ', 1, f.width - f.precision);
+	if (has_malloc)
+		free(string);
 	return (count);
 }

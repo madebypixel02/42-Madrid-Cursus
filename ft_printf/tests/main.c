@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:37:37 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/04 13:04:09 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/04 22:09:15 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
 		check_leaks(argc, argv[1]);
 	else
 	{
-		ft_printf("Len: %d\n", ft_printf("A26: %0.s %0.s$\n", "123", "4567"));
-		printf("Len: %d\n", printf("A26: %0.s %0.s$\n", "123", "4567"));
+		ft_printf("Len: %d\n", ft_printf("A33: %-9.1s$\n", NULL));
+		printf("Len: %d\n", printf("B33: %-9.1s$\n", NULL));
 	}
 }
