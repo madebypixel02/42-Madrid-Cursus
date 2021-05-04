@@ -6,13 +6,13 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:02:06 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/04/21 12:38:11 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/04 09:52:26 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstrn_fd(char *s, int fd, int n)
+int	ft_putstrn_fd(char *s, int fd, size_t n)
 {
 	if (s != NULL)
 		return ((int)write(fd, s, n));
