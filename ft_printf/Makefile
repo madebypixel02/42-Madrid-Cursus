@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/05/01 20:32:09 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/05/04 09:23:25 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,17 @@ AR = ar rcs
 LIBFT = libft
 NAME = ft_printf.a
 SRC_M = ft_printf.c ft_format.c ft_parse.c	\
-ft_print_chars.c ft_print_nbrs.c			\
+ft_print_chars.c ft_print_nbrs.c		\
 ft_print_hex.c
 SRC_B = 
 OBJ_M = $(SRC_M:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
+
+LEAKS = leaks a.out && ./a.out
+UNAME = $(shell uname -s)
+ifeq ($(UNAME), Linux)
+	LEAKS = valgrind -q --leak-check=full ./a.out
+endif
 
 all: $(NAME) $(LIBFT)
 
@@ -43,8 +49,9 @@ $(LIBFT).a:
 
 test: all
 	$(CC) -c tests/main.c
-	$(CC) main.o $(NAME) && ./a.out | cat -e
-	$(RM) main.o
+	$(CC) main.o $(NAME)
+	$(LEAKS) | cat -e
+	$(RM) main.o a.out
 
 clean:
 	make clean -C $(LIBFT)
