@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:11:41 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/01 13:15:21 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/04 09:13:54 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,15 @@
 
 typedef struct s_format
 {
-	int		minus;
-	int		plus;
-	int		width;
-	int		width_specified;
-	int		precision;
-	int		precision_specified;
+	int	minus;
+	int	plus;
+	int	width;
+	int	width_specified;
+	int	precision;
+	int	precision_specified;
 	char	specifier;
-	int		zero;
+	int	zero;
+	int	dot;
 }					t_format;
 
 # define INT_MIN -2147483648

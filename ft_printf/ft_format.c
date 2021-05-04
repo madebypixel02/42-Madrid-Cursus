@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:52:18 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/03 16:16:35 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/04 09:14:29 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ t_format	ft_newformat(void)
 	newformat.precision_specified = 0;
 	newformat.specifier = 0;
 	newformat.zero = 0;
+	newformat.dot = 0;
 	return (newformat);
 }

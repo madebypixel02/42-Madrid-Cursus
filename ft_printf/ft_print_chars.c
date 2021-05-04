@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 10:43:07 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/01 11:26:09 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/04 09:17:43 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_print_c_pct(t_format f, va_list ap)
 {
 	char	c;
-	int		count;
+	int	count;
 
 	count = 0;
 	if (f.specifier == 'c')
@@ -34,13 +34,13 @@ int	ft_print_c_pct(t_format f, va_list ap)
 int	ft_print_s(t_format f, va_list ap)
 {
 	char	*string;
-	int		count;
-	int		len;
+	int	count;
+	int	len;
 
 	count = 0;
 	string = va_arg(ap, char *);
 	len = ft_strlen(string);
-	if (!f.precision_specified)
+	if (!f.dot || f.precision > len)
 		f.precision = len;
 	if (!f.minus && f.width - f.precision > 0)
 		count += ft_putnchar_fd(' ', 1, f.width - f.precision);
