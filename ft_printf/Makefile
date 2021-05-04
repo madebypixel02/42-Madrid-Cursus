@@ -6,10 +6,11 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/05/04 11:26:39 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/05/04 11:31:31 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+UNAME = $(shell uname -s)
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 CC = gcc
@@ -22,12 +23,6 @@ ft_print_hex.c
 SRC_B = 
 OBJ_M = $(SRC_M:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
-
-LEAKS = leaks a.out && ./a.out
-UNAME = $(shell uname -s)
-ifeq ($(UNAME), Linux)
-	LEAKS = valgrind -q --leak-check=full ./a.out
-endif
 
 all: $(NAME) $(LIBFT)
 
@@ -50,7 +45,7 @@ $(LIBFT).a:
 test: all
 	$(CC) -c tests/main.c
 	$(CC) main.o $(NAME)
-	./a.out "$(UNAME)" | cat -e
+	./a.out $(UNAME)
 	$(RM) main.o a.out
 
 clean:
