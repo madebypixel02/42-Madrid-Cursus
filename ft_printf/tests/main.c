@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:37:37 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/04 10:47:10 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/04 10:58:00 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,10 @@ int	main(int argc, char **argv)
 	char	*uname;
 
 	uname = (char *)popen("uname -s", "r");
-	if (ft_strncmp(uname, "Linux", 5) && !*argv)
+	if (!ft_strncmp(uname, "Linux", 5) && argc == 1)
 	{
-		uname = NULL;
-		system("valgrind -q --leak-check=full ./a.out 1");
+		system("valgrind -q --leak-check=full ./a.out 1 | cat -e");
 	}
-	else if (!*argv)
-		system("leaks a.out && ./a.out");
+	else if (argc == 1)
+		system("leaks a.out && ./a.out 1 | cat -e");
 }
