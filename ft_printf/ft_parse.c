@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/04 09:15:37 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/04 12:09:55 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ t_format	ft_parse_precision(char *str, va_list ap, t_format f)
 				f.precision = va_arg(ap, int);
 			else
 				f.precision = ft_atoi(str);
-		f.precision_specified = 1;
+			f.precision_specified = 1;
 		}
 		str++;
 	}
