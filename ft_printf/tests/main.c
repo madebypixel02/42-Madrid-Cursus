@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:37:37 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/04 11:49:46 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/04 11:52:57 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	check_leaks(int argc, char *uname)
 		system("valgrind -q --leak-check=full ./a.out");
 	else
 		system("leaks a.out && ./a.out");
-	ft_printf("Checked leaks in %s!\n", uname);
+	ft_printf("Finished checking leaks on %s!\n", uname);
 }
 
 int	main(int argc, char **argv)
