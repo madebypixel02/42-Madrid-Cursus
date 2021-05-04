@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/05/04 09:23:25 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/05/04 10:48:58 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ $(LIBFT).a:
 test: all
 	$(CC) -c tests/main.c
 	$(CC) main.o $(NAME)
-	$(LEAKS) | cat -e
+	./a.out | cat -e
 	$(RM) main.o a.out
 
 clean:
