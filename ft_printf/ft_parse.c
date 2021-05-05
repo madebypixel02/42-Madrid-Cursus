@@ -6,13 +6,13 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/04 12:09:55 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/05 13:45:21 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_format	ft_parse_width(char *str, va_list	ap, t_format f)
+t_format	ft_parse_width(const char *str, va_list	ap, t_format f)
 {
 	while (*str != '.' && !ft_strchr(SPECIFIERS, *str))
 	{
@@ -40,7 +40,7 @@ t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 	return (f);
 }
 
-t_format	ft_parse_precision(char *str, va_list ap, t_format f)
+t_format	ft_parse_precision(const char *str, va_list ap, t_format f)
 {
 	while (!ft_strchr(SPECIFIERS, *str))
 	{
@@ -64,7 +64,7 @@ t_format	ft_parse_precision(char *str, va_list ap, t_format f)
 	return (f);
 }
 
-int	ft_parse(char *str, va_list	ap)
+int	ft_parse(const char *str, va_list	ap)
 {
 	t_format	new_format;
 

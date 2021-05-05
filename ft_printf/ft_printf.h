@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:11:41 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/04 09:13:54 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/05 13:45:57 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@
 
 typedef struct s_format
 {
-	int	minus;
-	int	plus;
-	int	width;
-	int	width_specified;
-	int	precision;
-	int	precision_specified;
+	int		minus;
+	int		plus;
+	int		width;
+	int		width_specified;
+	int		precision;
+	int		precision_specified;
 	char	specifier;
-	int	zero;
-	int	dot;
+	int		zero;
+	int		dot;
 }					t_format;
 
 # define INT_MIN -2147483648
@@ -46,6 +46,6 @@ int			ft_print_c_pct(t_format f, va_list ap);
 int			ft_print_s(t_format f, va_list ap);
 int			ft_print_d_i_u(t_format f, va_list ap);
 int			ft_print_hex(t_format f, va_list ap);
-int			ft_parse(char *str, va_list	ap);
+int			ft_parse(const char *str, va_list	ap);
 
 #endif
