@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 static int	ft_recursive_hex(t_format f, size_t n, size_t n_bak)
 {

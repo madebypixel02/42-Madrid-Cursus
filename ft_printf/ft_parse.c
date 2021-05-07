@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 t_format	ft_parse_width(char *c, t_format f, va_list ap)
 {
