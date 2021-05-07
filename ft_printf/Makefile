@@ -6,13 +6,13 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/05/05 12:51:04 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/05/07 15:56:33 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 UNAME = $(shell uname -s)
 RM = rm -f
-CC = gcc -g3
+CC = gcc -g3 -fsanitize=address
 CFLAGS = -Wall -Wextra -Werror
 
 AR = ar rcs
@@ -46,7 +46,7 @@ $(LIBFT).a:
 test: all
 	$(CC) -c tests/main.c
 	$(CC) main.o $(NAME)
-	./a.out $(UNAME)
+	./a.out | cat -e
 	$(RM) main.o
 
 clean:

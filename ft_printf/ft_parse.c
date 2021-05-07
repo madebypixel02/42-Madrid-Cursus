@@ -6,78 +6,47 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/05 13:45:21 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/07 16:06:56 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_format	ft_parse_width(const char *str, va_list	ap, t_format f)
+t_format	ft_parse_width(char *c, t_format f, va_list ap)
 {
-	while (*str != '.' && !ft_strchr(SPECIFIERS, *str))
-	{
-		if (*str == '-')
-			f.minus = 1;
-		if (*str == '+')
-			f.plus = 1;
-		if (*str == '0')
-			f.zero = 1;
-		else if ((ft_isdigit(*str) || *str == '*') && !f.width_specified)
-		{
-			if (*str == '*')
-				f.width = va_arg(ap, int);
-			else
-				f.width = ft_atoi(str);
-			f.width_specified = 1;
-		}
-		str++;
-	}
-	if (f.width < 0)
-	{
+	if (*c == '-')
 		f.minus = 1;
-		f.width *= -1;
+	if (*c == '+')
+		f.plus = 1;
+	if (*c == '0' && !f.zero)
+		f.zero = 1;
+	if (*c == '*')
+		f.width = va_arg(ap, int);
+	return (f);
+}
+
+t_format	ft_parse_precision(char *c, t_format f, va_list ap)
+{
+	if ((ft_isdigit(*c) || *c == '*') && !f.precision_specified)
+	{
+		if (*c == '*')
+			f.precision = va_arg(ap, int);
+		else
+			f.precision = ft_atoi(c);
+		f.precision_specified = 1;
 	}
 	return (f);
 }
 
-t_format	ft_parse_precision(const char *str, va_list ap, t_format f)
+int	ft_parse(char *c, va_list ap, t_format f)
 {
-	while (!ft_strchr(SPECIFIERS, *str))
-	{
-		/*f (*str == '-')
-		{
-			f.precision = 0;
-			f.precision_specified = 1;
-			f.width++;
-			break ;
-		}*/
-		if ((ft_isdigit(*str) || *str == '*') && !f.precision_specified)
-		{
-			if (*str == '*')
-				f.precision = va_arg(ap, int);
-			else
-				f.precision = ft_atoi(str);
-			f.precision_specified = 1;
-		}
-		str++;
-	}
-	return (f);
-}
-
-int	ft_parse(const char *str, va_list	ap)
-{
-	t_format	new_format;
-
-	new_format = ft_parse_width(str, ap, ft_newformat());
-	while (!ft_strchr(SPECIFIERS, *str) && *str != '.')
-		str++;
-	if (*str == '.')
-	{
-		new_format.dot = 1;
-		new_format = ft_parse_precision(str++, ap, new_format);
-		while (!ft_strchr(SPECIFIERS, *str))
-			str++;
-	}
-	new_format.specifier = *str;
-	return (ft_print_format(new_format, ap));
+	/*if (*c == '.')
+		f.dot = 1;
+	if (!f.dot)
+		f = ft_parse_width(c, f, ap);
+	else if (f.dot)
+		f = ft_parse_precision(c, f, ap);*/
+	if (ft_strchr(SPECIFIERS, *c))
+		f.specifier = *c;
+	return (ft_print_format(f, ap));
 }
