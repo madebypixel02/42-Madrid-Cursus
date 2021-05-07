@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 10:43:07 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/04 22:07:18 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/07 11:00:19 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,10 @@ int	ft_print_c_pct(t_format f, va_list ap)
 	else
 		c = '%';
 	f.precision = 1;
-	if (!f.minus && f.width - f.precision > 0)
-		count += ft_putnchar_fd(' ', 1, f.width - f.precision);
+	if (!f.minus && f.width > f.precision && !f.precision_specified && f.zero)
+		count += ft_putnchar_fd('0', 1, f.width - f.precision);
+ 	else if (!f.minus && f.width > f.precision)
+ 			count += ft_putnchar_fd(' ', 1, f.width - f.precision);
 	count += ft_putchar_fd(c, 1);
 	if (f.minus && f.width - f.precision > 0)
 		count += ft_putnchar_fd(' ', 1, f.width - f.precision);
