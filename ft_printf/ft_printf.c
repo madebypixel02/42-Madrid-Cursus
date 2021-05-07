@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *str, ...)
 {
@@ -21,6 +21,7 @@ int	ft_printf(const char *str, ...)
 
 	count = 0;
 	va_start(ap, str);
+	printf("Hello");
 	while (*str)
 	{
 		if (*str == '%')
