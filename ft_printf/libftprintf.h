@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
+#ifndef LIBFTPRINTF_H
 
-# define FT_PRINTF_H
+# define LIBFTPRINTF_H
 
 # include "libft/libft.h"
 # include <stdarg.h>
