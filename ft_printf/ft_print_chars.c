@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 10:43:07 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/08 10:35:19 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/08 14:14:57 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_print_c_pct(t_format f, va_list ap)
 {
 	char	c;
-	int	count;
+	int		count;
 
 	count = 0;
 	if (f.specifier == 'c')
@@ -25,8 +25,8 @@ int	ft_print_c_pct(t_format f, va_list ap)
 	f.precision = 1;
 	if (!f.minus && f.width > f.precision && !f.precision_specified && f.zero)
 		count += ft_putnchar_fd('0', 1, f.width - f.precision);
- 	else if (!f.minus && f.width > f.precision)
- 			count += ft_putnchar_fd(' ', 1, f.width - f.precision);
+	else if (!f.minus && f.width > f.precision)
+		count += ft_putnchar_fd(' ', 1, f.width - f.precision);
 	count += ft_putchar_fd(c, 1);
 	if (f.minus && f.width - f.precision > 0)
 		count += ft_putnchar_fd(' ', 1, f.width - f.precision);
@@ -36,9 +36,8 @@ int	ft_print_c_pct(t_format f, va_list ap)
 int	ft_print_s(t_format f, va_list ap)
 {
 	char	*string;
-	int	count;
-	int	len;
-	int	has_malloc;
+	int		count;
+	int		has_malloc;
 
 	count = 0;
 	has_malloc = 0;
@@ -49,9 +48,8 @@ int	ft_print_s(t_format f, va_list ap)
 		has_malloc = 1;
 		ft_strlcpy(string, "(null)", 7);
 	}
-	len = ft_strlen(string);
-	if (!f.dot || f.precision > len || f.precision < 0)
-		f.precision = len;
+	if (!f.dot || f.precision > (int)ft_strlen(string) || f.precision < 0)
+		f.precision = ft_strlen(string);
 	if (!f.minus && f.width > f.precision && !f.precision_specified && f.zero)
 		count += ft_putnchar_fd('0', 1, f.width - f.precision);
 	if (!f.minus && f.width - f.precision > 0 && !f.zero)
@@ -63,4 +61,3 @@ int	ft_print_s(t_format f, va_list ap)
 		free(string);
 	return (count);
 }
-

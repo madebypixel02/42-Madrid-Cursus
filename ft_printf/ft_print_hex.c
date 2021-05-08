@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 10:26:21 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/08 12:57:25 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/08 14:12:24 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ int	ft_print_hex(t_format f, va_list ap)
 	count = 0;
 	n = va_arg(ap, unsigned int);
 	len = ft_nbrlen(n, 16);
-	if (!n && f.precision <= 0 && f.dot) 
-		len = 0; 
+	if (!n && f.precision <= 0 && f.dot)
+		len = 0;
 	if (f.precision < 0 || f.precision < len || !f.dot)
 		f.precision = len;
 	if (!f.minus && f.width > f.precision && !f.dot && f.zero)
@@ -61,15 +61,14 @@ int	ft_print_hex(t_format f, va_list ap)
 
 int	ft_print_p(t_format f, va_list ap)
 {
-	int				count;
+	int		count;
 	size_t	n;
-	int				len;
+	int		len;
 
 	count = 0;
 	n = va_arg(ap, size_t);
 	len = ft_nbrlen(n, 16);
-	if (!n && f.precision <= 0 && f.dot) 
-		len = 0; 
+	len *= !(!n && f.precision <= 0 && f.dot);
 	if (f.precision < 0 || f.precision < len || !f.dot)
 		f.precision = len;
 	count += write(1, "0x", 2 * f.zero);
@@ -79,10 +78,8 @@ int	ft_print_p(t_format f, va_list ap)
 	else if (!f.minus && f.width > f.precision)
 		count += ft_putnchar_fd(' ', 1, (f.width - f.precision));
 	count += write(1, "0x", 2 * !f.zero);
-	if (n)
-		count += ft_putnchar_fd('0', 1, (f.precision - len));
-	else if (f.dot)
-		count += ft_putnchar_fd('0', 1, (f.precision));
+	count += ft_putnchar_fd('0', 1, (f.precision - len) * (n != 0));
+	count += ft_putnchar_fd('0', 1, f.precision * (f.dot && !n));
 	if (len)
 		count += ft_recursive_hex(f, n, n);
 	if (f.minus && f.width > f.precision)
