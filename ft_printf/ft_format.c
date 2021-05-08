@@ -25,5 +25,6 @@ t_format	ft_newformat(void)
 	newformat.precision_specified = 0;
 	newformat.specifier = 0;
 	newformat.zero = 0;
+	newformat.dot = 0;
 	return (newformat);
 }

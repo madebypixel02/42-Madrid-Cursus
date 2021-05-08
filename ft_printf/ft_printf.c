@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:24:33 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/01 11:04:08 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/08 13:31:29 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,21 @@
 
 int	ft_printf(const char *str, ...)
 {
-	int		count;
-	char	*ptr;
-	char	*substr;
-	va_list	ap;
+	int			count;
+	va_list		ap;
 
 	count = 0;
 	va_start(ap, str);
-	printf("Hello");
 	while (*str)
 	{
 		if (*str == '%')
 		{
-			str++;
-			ptr = (char *)str;
-			while (!ft_strchr(SPECIFIERS, *str) && *str)
+			if (*(++str))
+				count += ft_parse((char *)str, ap);
+			while (*str && !ft_strchr(SPECIFIERS, *str))
 				str++;
-			substr = ft_substr(ptr, 0, str - ptr + 1);
-			count += ft_parse(substr, ap);
-			free(substr);
+			if (!*str)
+				break ;
 		}
 		else
 			count += ft_putchar_fd(*str, 1);
@@ -52,7 +48,9 @@ int	ft_print_format(t_format f, va_list ap)
 		count = ft_print_s(f, ap);
 	if (f.specifier == 'd' || f.specifier == 'i' || f.specifier == 'u')
 		count = ft_print_d_i_u(f, ap);
-	if (f.specifier == 'p' || f.specifier == 'X' || f.specifier == 'x')
+	if (f.specifier == 'X' || f.specifier == 'x')
 		count = ft_print_hex(f, ap);
+	if (f.specifier == 'p')
+		count = ft_print_p(f, ap);
 	return (count);
 }

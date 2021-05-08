@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/01 09:50:34 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/08 13:05:38 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 {
-	while (*str && *str != '.')
+	while (*str != '.' && !ft_strchr(SPECIFIERS, *str))
 	{
 		if (*str == '-')
 			f.minus = 1;
@@ -40,25 +40,18 @@ t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 	return (f);
 }
 
-t_format	ft_parse_precision(char *str, va_list	ap, t_format f)
+t_format	ft_parse_precision(char *str, va_list ap, t_format f)
 {
-	while (*str)
+	while (!ft_strchr(SPECIFIERS, *str))
 	{
-		if (*str == '-')
-		{
-			f.precision = 0;
-			f.precision_specified = 1;
-			f.width++;
-			break ;
-		}
 		if ((ft_isdigit(*str) || *str == '*') && !f.precision_specified)
 		{
-			if (ft_strchr(str, '*'))
+			if (*str == '*')
 				f.precision = va_arg(ap, int);
 			else
 				f.precision = ft_atoi(str);
+			f.precision_specified = 1;
 		}
-		f.precision_specified = 1;
 		str++;
 	}
 	return (f);
@@ -69,16 +62,17 @@ int	ft_parse(char *str, va_list	ap)
 	t_format	new_format;
 
 	new_format = ft_parse_width(str, ap, ft_newformat());
-	while (*str && *str != '.')
+	while (!ft_strchr(SPECIFIERS, *str) && *str != '.')
 		str++;
-	if (*str == '.')
+	if (*str == '.' && !new_format.specifier)
 	{
-		str++;
-		new_format = ft_parse_precision(str, ap, new_format);
-		while (*str)
+		new_format.dot = 1;
+		new_format = ft_parse_precision(str++, ap, new_format);
+		while (!ft_strchr(SPECIFIERS, *str))
 			str++;
 	}
-	if (ft_strchr(SPECIFIERS, *(str - 1)))
-		new_format.specifier = *(str - 1);
-	return (ft_print_format(new_format, ap));
+	new_format.specifier = *str;
+	if (new_format.specifier)
+		return (ft_print_format(new_format, ap));
+	return (0);
 }
