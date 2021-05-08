@@ -1,6 +1,7 @@
 libft-unit-test/
 libftTester/
 printfTester/
+pft_2019/
 a.out
 *.o
 *.so
