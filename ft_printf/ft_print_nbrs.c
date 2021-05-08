@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 09:58:43 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/01 10:51:28 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/08 10:50:24 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ static int	ft_print_nbr(t_format f, char *nbr, int len, int sign)
 	int	count;
 
 	count = 0;
-	if (*nbr == '0' && f.precision <= 0 && f.precision_specified)
+	if (*nbr == '0' && f.precision <= 0 && f.dot)
 		len = 0;
-	if (f.precision < 0 || f.precision < len || !f.precision_specified)
+	if (f.precision < 0 || f.precision < len || !f.dot)
 		f.precision = len;
-	count += ft_putnchar_fd('-', 1, sign && f.zero && !f.precision_specified);
-	if (!f.minus && f.width > f.precision && !f.precision_specified && f.zero)
+	count += ft_putnchar_fd('-', 1, sign && f.zero && !f.dot);
+	if (!f.minus && f.width > f.precision && !f.dot && f.zero)
 		count += ft_putnchar_fd('0', 1, f.width - f.precision - sign);
 	else if (!f.minus && f.width > f.precision)
 		count += ft_putnchar_fd(' ', 1, f.width - f.precision - sign);
-	count += ft_putnchar_fd('-', 1, sign && (!f.zero || f.precision_specified));
+	count += ft_putnchar_fd('-', 1, sign && (!f.zero || f.dot));
 	count += ft_putnchar_fd('0', 1, f.precision - len);
 	count += write(1, nbr, len);
 	if (f.minus && f.width > f.precision)
@@ -56,4 +56,3 @@ int	ft_print_d_i_u(t_format f, va_list ap)
 	free(nbr);
 	return (count);
 }
-
