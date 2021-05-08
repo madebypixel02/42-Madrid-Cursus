@@ -6,10 +6,11 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/05/01 11:00:34 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/05/08 13:47:41 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+UNAME = $(shell uname -s)
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 CC = gcc
@@ -43,8 +44,9 @@ $(LIBFT).a:
 
 test: all
 	$(CC) -c tests/main.c
-	$(CC) main.o $(NAME) && ./a.out | cat -e
-	$(RM) main.o
+	$(CC) main.o $(NAME)
+	./a.out $(UNAME) | cat -e
+	$(RM) main.o a.out
 
 clean:
 	make clean -C $(LIBFT)
