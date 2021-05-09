@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 09:58:43 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/09 21:40:25 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/09 22:05:17 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ int	ft_print_d_i_u(t_format f, va_list ap)
 		len = 0;
 	if (f.precision < 0 || f.precision < len || !f.dot)
 		f.precision = len;
+	if (f.space && !neg && !f.plus && f.width)
+		f.width--;
 	c += ft_print_nbr(f, nbr, len, neg);
 	free(nbr);
 	return (c);
