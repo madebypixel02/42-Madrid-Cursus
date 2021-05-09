@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:00:03 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/08 14:27:39 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/09 17:17:23 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 static char	*ft_allocate(char *str, int len, unsigned int n, unsigned int n_bak)
 {
+	if (n_bak == 0)
+		len = 1;
 	str = (char *)malloc(len + 1);
 	if (str == NULL)
 		return (NULL);
 	str[len] = '\0';
 	while (len-- > 0)
 	{
-		if (len > 0 || n_bak == 0)
-			str[len] = (n % 10) + '0';
+		str[len] = (n % 10) + '0';
 		n /= 10;
 	}
 	return (str);
