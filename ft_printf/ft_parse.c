@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/08 13:05:38 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/09 21:44:56 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 			f.minus = 1;
 		if (*str == '+')
 			f.plus = 1;
+		if (*str == ' ')
+			f.space = 1;
 		if (*str == '0' && !ft_isdigit(*(str - 1)))
 			f.zero = 1;
 		else if ((ft_isdigit(*str) || *str == '*') && !f.width_specified)
@@ -31,12 +33,7 @@ t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 			f.width_specified = 1;
 		}
 		str++;
-	}
-	if (f.width < 0)
-	{
-		f.minus = 1;
-		f.width *= -1;
-	}
+	}	
 	return (f);
 }
 
@@ -71,8 +68,13 @@ int	ft_parse(char *str, va_list	ap)
 		while (!ft_strchr(SPECIFIERS, *str))
 			str++;
 	}
+	if (new_format.width < 0)
+	{
+		new_format.minus = 1;
+		new_format.width *= -1;
+	}
 	new_format.specifier = *str;
-	if (new_format.specifier)
-		return (ft_print_format(new_format, ap));
-	return (0);
+	if (new_format.space)
+		new_format.width = 0;
+	return (ft_print_format(new_format, ap));
 }
