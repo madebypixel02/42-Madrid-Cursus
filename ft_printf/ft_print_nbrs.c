@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 09:58:43 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/08 10:50:24 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/09 17:43:38 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ft_print_d_i_u(t_format f, va_list ap)
 	if (n < 0 && f.specifier != 'u')
 		n *= -1;
 	if (n < 0 && f.specifier == 'u')
-		nbr = ft_uitoa(n + UINT_MAX + 1);
+		nbr = ft_uitoa((unsigned)n);
 	else
 		nbr = ft_itoa(n);
 	len = ft_strlen(nbr);
