@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 09:58:43 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/09 17:43:38 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/09 18:37:59 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_print_nbr(t_format f, char *nbr, int len, int sign)
 	int	count;
 
 	count = 0;
-	if (*nbr == '0' && f.precision <= 0 && f.dot)
+	if (*nbr == '0' && !f.precision && f.dot)
 		len = 0;
 	if (f.precision < 0 || f.precision < len || !f.dot)
 		f.precision = len;

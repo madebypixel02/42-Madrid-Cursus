@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 10:26:21 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/08 14:12:24 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/09 18:41:52 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_print_hex(t_format f, va_list ap)
 	count = 0;
 	n = va_arg(ap, unsigned int);
 	len = ft_nbrlen(n, 16);
-	if (!n && f.precision <= 0 && f.dot)
+	if (!n && !f.precision && f.dot)
 		len = 0;
 	if (f.precision < 0 || f.precision < len || !f.dot)
 		f.precision = len;
@@ -68,7 +68,7 @@ int	ft_print_p(t_format f, va_list ap)
 	count = 0;
 	n = va_arg(ap, size_t);
 	len = ft_nbrlen(n, 16);
-	len *= !(!n && f.precision <= 0 && f.dot);
+	len *= !(!n && !f.precision && f.dot);
 	if (f.precision < 0 || f.precision < len || !f.dot)
 		f.precision = len;
 	count += write(1, "0x", 2 * f.zero);
