@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 09:58:43 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/09 22:05:17 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/09 22:10:57 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ static int	ft_print_nbr(t_format f, char *nbr, int len, int neg)
 	int	c;
 
 	c = 0;
+	if (f.space && !neg && !f.plus && f.width)
+		f.width--;
 	if (neg || f.plus)
 		c += ft_putnchar_fd(plus(f), 1, f.zero && !f.dot);
 	else if (f.space)
@@ -67,8 +69,6 @@ int	ft_print_d_i_u(t_format f, va_list ap)
 		len = 0;
 	if (f.precision < 0 || f.precision < len || !f.dot)
 		f.precision = len;
-	if (f.space && !neg && !f.plus && f.width)
-		f.width--;
 	c += ft_print_nbr(f, nbr, len, neg);
 	free(nbr);
 	return (c);
