@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 10:43:07 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/08 14:14:57 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/09 23:36:54 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_print_c_pct(t_format f, va_list ap)
 	else
 		c = '%';
 	f.precision = 1;
-	if (!f.minus && f.width > f.precision && !f.precision_specified && f.zero)
+	if (!f.minus && f.width > f.precision && f.zero && !f.dot)
 		count += ft_putnchar_fd('0', 1, f.width - f.precision);
 	else if (!f.minus && f.width > f.precision)
 		count += ft_putnchar_fd(' ', 1, f.width - f.precision);
@@ -50,7 +50,7 @@ int	ft_print_s(t_format f, va_list ap)
 	}
 	if (!f.dot || f.precision > (int)ft_strlen(string) || f.precision < 0)
 		f.precision = ft_strlen(string);
-	if (!f.minus && f.width > f.precision && !f.precision_specified && f.zero)
+	if (!f.minus && f.width > f.precision && f.zero && !f.dot)
 		count += ft_putnchar_fd('0', 1, f.width - f.precision);
 	if (!f.minus && f.width - f.precision > 0 && !f.zero)
 		count += ft_putnchar_fd(' ', 1, f.width - f.precision);

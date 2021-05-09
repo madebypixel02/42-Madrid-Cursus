@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/09 22:01:03 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/09 23:30:32 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 {
+	int	specified;
+
+	specified = 0;
 	while (*str != '.' && !ft_strchr(SPECIFIERS, *str))
 	{
 		if (*str == '-')
@@ -24,13 +27,13 @@ t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 			f.space = 1;
 		if (*str == '0' && !ft_isdigit(*(str - 1)))
 			f.zero = 1;
-		else if ((ft_isdigit(*str) || *str == '*') && !f.width_specified)
+		else if ((ft_isdigit(*str) || *str == '*') && !specified)
 		{
 			if (*str == '*')
 				f.width = va_arg(ap, int);
 			else
 				f.width = ft_atoi(str);
-			f.width_specified = 1;
+			specified = 1;
 		}
 		str++;
 	}	
@@ -39,15 +42,18 @@ t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 
 t_format	ft_parse_precision(char *str, va_list ap, t_format f)
 {
+	int	specified;
+
+	specified = 0;
 	while (!ft_strchr(SPECIFIERS, *str))
 	{
-		if ((ft_isdigit(*str) || *str == '*') && !f.precision_specified)
+		if ((ft_isdigit(*str) || *str == '*') && !specified)
 		{
 			if (*str == '*')
 				f.precision = va_arg(ap, int);
 			else
 				f.precision = ft_atoi(str);
-			f.precision_specified = 1;
+			specified = 1;
 		}
 		str++;
 	}
