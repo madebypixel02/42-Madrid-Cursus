@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 10:26:21 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/10 12:23:09 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/10 12:43:28 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,11 @@ int	ft_print_x_X(t_format f, va_list ap)
 		f.precision = len;
 	if (f.sharp && n)
 		f.width -= 2;
-	count += ft_putstrn_fd(ft_sharp(f), 1, 2 * (f.sharp && f.zero && n));
+	if (!f.minus && f.width > f.precision && (!f.zero || f.dot))
+		count += ft_putnchar_fd(' ', 1, (f.width - f.precision));
+	count += ft_putstrn_fd(ft_sharp(f), 1, 2 * (f.sharp && n));
 	if (!f.minus && f.width > f.precision && !f.dot && f.zero)
 		count += ft_putnchar_fd('0', 1, (f.width - f.precision));
-	else if (!f.minus && f.width > f.precision)
-		count += ft_putnchar_fd(' ', 1, (f.width - f.precision));
-	count += ft_putstrn_fd(ft_sharp(f), 1, 2 * (f.sharp && !f.zero && n));
 	count += ft_putnchar_fd('0', 1, (f.precision - len));
 	if (len)
 		count += ft_recursive_hex(f, n, n);
