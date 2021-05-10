@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:11:41 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/10 14:08:52 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/10 18:14:22 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_format
 	int		plus;
 	int		width;
 	int		precision;
+	int		neg_prec;
 	char	specifier;
 	int		zero;
 	int		dot;
