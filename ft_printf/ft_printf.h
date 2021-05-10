@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:11:41 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/09 23:28:04 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/10 10:37:57 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct s_format
 	int		zero;
 	int		dot;
 	int		space;
+	int		sharp;
 }			t_format;
 
 # define INT_MIN -2147483648
@@ -37,6 +38,9 @@ typedef struct s_format
 
 # define HEXALOW	"0123456789abcdef"
 # define HEXAUP		"0123456789ABCDEF"
+# define SHARPLOW	"0x"
+# define SHARPUP	"0X"
+
 
 int			ft_printf(const char *str, ...);
 t_format	ft_newformat(void);

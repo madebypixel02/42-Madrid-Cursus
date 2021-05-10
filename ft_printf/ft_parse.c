@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/09 23:30:32 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/10 10:32:03 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 			f.plus = 1;
 		if (*str == ' ')
 			f.space = 1;
+		if (*str == '#')
+			f.sharp = 1;
 		if (*str == '0' && !ft_isdigit(*(str - 1)))
 			f.zero = 1;
 		else if ((ft_isdigit(*str) || *str == '*') && !specified)
