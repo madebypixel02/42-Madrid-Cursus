@@ -6,16 +6,16 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 14:01:05 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/10 14:20:22 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/10 18:25:11 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_print_n(va_list ap, int count)
+int	ft_print_n(va_list ap, int count)
 {
-	int *n;
- 
+	int	*n;
+
 	n = va_arg(ap, int *);
 	*n = count;
 	return (0);
