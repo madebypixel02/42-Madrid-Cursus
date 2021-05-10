@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:11:41 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/10 12:23:34 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/10 13:33:10 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct s_format
 # define UINT_MAX 4294967295
 
 # define FLAGS		"-0.*"
-# define SPECIFIERS	"cspdiuxX%"
+# define SPECIFIERS	"cspdiuxXnfe%"
 
 # define HEXALOW	"0123456789abcdef"
 # define HEXAUP		"0123456789ABCDEF"
@@ -47,6 +47,7 @@ int			ft_print_s(t_format f, va_list ap);
 int			ft_print_d_i_u(t_format f, va_list ap);
 int			ft_print_x_X(t_format f, va_list ap);
 int			ft_print_p(t_format f, va_list ap);
-int			ft_parse(char *str, va_list	ap);
+int			ft_print_n(va_list ap, int count);
+int			ft_parse(char *str, va_list	ap, int count);
 
 #endif
