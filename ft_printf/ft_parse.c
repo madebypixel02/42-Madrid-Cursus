@@ -6,13 +6,28 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/10 10:32:03 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/10 12:16:45 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_format	ft_parse_width(char *str, va_list	ap, t_format f)
+static t_format	ft_parse_bonus(char *str, t_format f)
+{
+	while (*str != '.' && !ft_strchr(SPECIFIERS, *str))
+	{
+		if (*str == '+')
+			f.plus = 1;
+		if (*str == ' ')
+			f.space = 1;
+		if (*str == '#')
+			f.sharp = 1;
+		str++;
+	}
+	return (f);
+}
+
+static t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 {
 	int	specified;
 
@@ -21,12 +36,6 @@ t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 	{
 		if (*str == '-')
 			f.minus = 1;
-		if (*str == '+')
-			f.plus = 1;
-		if (*str == ' ')
-			f.space = 1;
-		if (*str == '#')
-			f.sharp = 1;
 		if (*str == '0' && !ft_isdigit(*(str - 1)))
 			f.zero = 1;
 		else if ((ft_isdigit(*str) || *str == '*') && !specified)
@@ -42,7 +51,7 @@ t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 	return (f);
 }
 
-t_format	ft_parse_precision(char *str, va_list ap, t_format f)
+static t_format	ft_parse_precision(char *str, va_list ap, t_format f)
 {
 	int	specified;
 
@@ -67,6 +76,7 @@ int	ft_parse(char *str, va_list	ap)
 	t_format	new_format;
 
 	new_format = ft_parse_width(str, ap, ft_newformat());
+	new_format = ft_parse_bonus(str, new_format);
 	while (!ft_strchr(SPECIFIERS, *str) && *str != '.')
 		str++;
 	if (*str == '.' && !new_format.specifier)
