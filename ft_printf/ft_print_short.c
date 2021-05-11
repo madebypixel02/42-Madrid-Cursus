@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 14:01:05 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/11 11:41:03 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/11 12:10:57 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_print_h(t_format f, va_list ap)
 {
-	char		*nbr;
-	short		n;
+	char	*nbr;
+	short	n;
 	int		c;
 	int		len;
 	int		neg;
@@ -45,9 +45,9 @@ void	*ft_print_hh(t_format f, va_list ap)
 {
 	char		*nbr;
 	long long	n;
-	int		c;
-	int		len;
-	int		neg;
+	int			c;
+	int			len;
+	int			neg;
 
 	c = 0;
 	n = va_arg(ap, short short int);
