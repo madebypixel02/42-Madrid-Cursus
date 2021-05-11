@@ -6,13 +6,13 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 14:01:05 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/11 12:10:37 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/11 12:58:47 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	*ft_print_l(t_format f, va_list ap)
+int	ft_print_l(t_format f, va_list ap)
 {
 	char	*nbr;
 	long	n;
@@ -22,7 +22,7 @@ void	*ft_print_l(t_format f, va_list ap)
 
 	c = 0;
 	n = va_arg(ap, long int);
-	neg = (n < 0 && n != LONG_MIN && f.specifier != 'u');
+	neg = (n < 0 && f.specifier != 'u');
 	if (neg)
 		f.plus = 0;
 	if (n < 0 && f.specifier != 'u')
@@ -41,7 +41,7 @@ void	*ft_print_l(t_format f, va_list ap)
 	return (c);
 }
 
-void	*ft_print_ll(t_format f, va_list ap)
+int	ft_print_ll(t_format f, va_list ap)
 {
 	char		*nbr;
 	long long	n;
@@ -50,14 +50,14 @@ void	*ft_print_ll(t_format f, va_list ap)
 	int			neg;
 
 	c = 0;
-	n = va_arg(ap, long long int);
-	neg = (n < 0 && n != LLONG_MIN && f.specifier != 'u');
+	n = va_arg(ap, long int);
+	neg = (n < 0 && f.specifier != 'u');
 	if (neg)
 		f.plus = 0;
 	if (n < 0 && f.specifier != 'u')
 		n *= -1;
 	if (n < 0 && f.specifier == 'u')
-		nbr = ft_uitoa((unsigned long long)n);
+		nbr = ft_uitoa((unsigned long)n);
 	else
 		nbr = ft_itoa(n);
 	len = ft_strlen(nbr);

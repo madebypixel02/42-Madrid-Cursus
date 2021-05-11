@@ -6,13 +6,13 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 14:01:05 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/11 12:10:57 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/11 13:02:21 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	*ft_print_h(t_format f, va_list ap)
+int	ft_print_h(t_format f, va_list ap)
 {
 	char	*nbr;
 	short	n;
@@ -21,7 +21,7 @@ void	*ft_print_h(t_format f, va_list ap)
 	int		neg;
 
 	c = 0;
-	n = va_arg(ap, short);
+	n = va_arg(ap, int);
 	neg = (n < 0 && n != SHRT_MIN && f.specifier != 'u');
 	if (neg)
 		f.plus = 0;
@@ -41,7 +41,7 @@ void	*ft_print_h(t_format f, va_list ap)
 	return (c);
 }
 
-void	*ft_print_hh(t_format f, va_list ap)
+int	ft_print_hh(t_format f, va_list ap)
 {
 	char		*nbr;
 	long long	n;
@@ -50,14 +50,14 @@ void	*ft_print_hh(t_format f, va_list ap)
 	int			neg;
 
 	c = 0;
-	n = va_arg(ap, short short int);
-	neg = (n < 0 && n != && f.specifier != 'u');
+	n = va_arg(ap, int);
+	neg = (n < 0 && n != SSHRT_MIN && f.specifier != 'u');
 	if (neg)
 		f.plus = 0;
 	if (n < 0 && f.specifier != 'u')
 		n *= -1;
 	if (n < 0 && f.specifier == 'u')
-		nbr = ft_uitoa((unsigned short short)n);
+		nbr = ft_uitoa((unsigned short)n);
 	else
 		nbr = ft_itoa(n);
 	len = ft_strlen(nbr);
