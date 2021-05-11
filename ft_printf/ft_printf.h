@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:11:41 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/11 13:18:37 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/11 17:48:36 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,15 @@ int			ft_print_d_i_u(t_format f, va_list ap);
 int			ft_print_nbr(t_format f, char *nbr, int len, int neg);
 int			ft_print_x_X(t_format f, va_list ap);
 int			ft_print_p(t_format f, va_list ap);
+char		*ft_sharp(t_format f);
+int			ft_recursive_hex(t_format f, size_t n, size_t iteration);
 int			ft_print_n(va_list ap, int count);
 int			ft_print_f(t_format f, va_list ap);
 int			ft_parse(char *str, va_list	ap, int count);
 int			ft_print_bonus(t_format f, va_list ap);
-int			ft_print_l(t_format f, va_list ap);
-int			ft_print_ll(t_format f, va_list ap);
-int			ft_print_h(t_format f, va_list ap);
-int			ft_print_hh(t_format f, va_list ap);
+int			ft_print_l_diu(t_format f, va_list ap);
+int			ft_print_l_hex(t_format f, va_list ap);
+int			ft_print_h_diu(t_format f, va_list ap);
+int			ft_print_h_hex(t_format f, va_list ap);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 09:58:43 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/11 15:22:40 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/11 18:30:51 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,15 +54,12 @@ int	ft_print_d_i_u(t_format f, va_list ap)
 
 	c = 0;
 	n = va_arg(ap, int);
-	neg = (n < 0 && n != INT_MIN && f.specifier != 'u');
+	neg = (n < 0 && f.specifier != 'u');
 	if (neg)
 		f.plus = 0;
 	if (n < 0 && f.specifier != 'u')
 		n *= -1;
-	if (n < 0 && f.specifier == 'u')
-		nbr = ft_uitoa((unsigned)n);
-	else
-		nbr = ft_itoa(n);
+	nbr = ft_uitoa((unsigned)n);
 	len = ft_strlen(nbr);
 	if (*nbr == '0' && !f.precision && f.dot)
 		len = 0;
