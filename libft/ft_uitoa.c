@@ -6,13 +6,14 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 17:00:03 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/09 17:17:23 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/11 13:41:22 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_allocate(char *str, int len, unsigned int n, unsigned int n_bak)
+static char	*ft_allocate(char *str, int len, \
+		long long unsigned n, long long unsigned n_bak)
 {
 	if (n_bak == 0)
 		len = 1;
@@ -28,7 +29,7 @@ static char	*ft_allocate(char *str, int len, unsigned int n, unsigned int n_bak)
 	return (str);
 }
 
-char	*ft_uitoa(unsigned int n)
+char	*ft_uitoa(long long unsigned n)
 {
 	char			*str;
 	int				len;
