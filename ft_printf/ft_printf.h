@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:11:41 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/11 13:01:56 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/11 13:18:37 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int			ft_print_p(t_format f, va_list ap);
 int			ft_print_n(va_list ap, int count);
 int			ft_print_f(t_format f, va_list ap);
 int			ft_parse(char *str, va_list	ap, int count);
+int			ft_print_bonus(t_format f, va_list ap);
 int			ft_print_l(t_format f, va_list ap);
 int			ft_print_ll(t_format f, va_list ap);
 int			ft_print_h(t_format f, va_list ap);
