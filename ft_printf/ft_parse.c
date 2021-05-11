@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/10 18:17:21 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/05/11 09:57:44 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ static t_format	ft_parse_bonus(char *str, t_format f)
 			f.space = 1;
 		if (*str == '#')
 			f.sharp = 1;
+		if (*str == 'l' && f.l_count <= 2)
+			f.l_count++;
 		str++;
 	}
 	return (f);
