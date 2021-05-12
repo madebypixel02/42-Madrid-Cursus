@@ -22,7 +22,7 @@ int	ft_print_h_diu(t_format f, va_list ap)
 
 	c = 0;
 	n = va_arg(ap, int);
-	neg = (n < 0 && n >= SHRT_MIN && f.specifier != 'u');
+	neg = (n < 0 && f.specifier != 'u');
 	f.plus *= !neg;
 	if (n < 0 && f.specifier != 'u')
 		n *= -1;
