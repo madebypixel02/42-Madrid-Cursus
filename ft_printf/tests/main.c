@@ -32,7 +32,7 @@ int	main(int argc, char **argv)
 		check_leaks(argc, argv[1]);
 	else
 	{
-		printf("Len: %d\n", ft_printf("A %li\n", LONG_MAX + 1));
-		printf("Len: %d\n", printf("B %li\n", LONG_MAX + 1));
+		printf("Len: %d\n", ft_printf("A%li\n", LONG_MAX + 1));
+		printf("Len: %d\n", printf("B%li\n", LONG_MAX + 1));
 	}
 }
