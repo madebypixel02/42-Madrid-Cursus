@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/06/27 14:33:37 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/06/27 14:42:34 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ test: all
 	$(CC) -c tests/main.c
 	$(CC) main.o $(NAME)
 	./a.out $(UNAME) | cat -e
-	$(RM) main.o a.out
+	#$(RM) main.o a.out
 
 clean:
 	make clean -C $(LIBFT)
