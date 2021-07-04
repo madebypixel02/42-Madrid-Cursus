@@ -80,4 +80,5 @@ make git	Stages every modified file to commit and pushes to upstream branch
 ## Summary
 
 This was my second project as a 42 student in Madrid. Looking forward to the new projects coming next!
-July 4th, 20201
+
+July 4th, 2021
