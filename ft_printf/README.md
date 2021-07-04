@@ -17,13 +17,13 @@ Printf is likely one of the most popular commands people see when learning a new
 Our version of the printf function will be called ``ft_printf``, and will be able to work with the following inputs:
 ```
 Specifiers:
-	%	Prints the percent character
-	c	Prints a character
-	s	Prints a string (array of characters)
-	d,i	Prints an integer
-	u	Prints an unsigned integer
-	x	Prints an unsigned hexadecimal integer (lowecase a-f)
-	X	Prints an unsigned hexadecimal integer (uppercase A-F)
+	%		Prints the percent character
+	c		Prints a character
+	s		Prints a string (array of characters)
+	d,i		Prints an integer
+	u		Prints an unsigned integer
+	x		Prints an unsigned hexadecimal integer (lowecase a-f)
+	X		Prints an unsigned hexadecimal integer (uppercase A-F)
 
 Flags:
 	Width		Specifies the minimum width of the printed variable (adds spaces when necessary)
