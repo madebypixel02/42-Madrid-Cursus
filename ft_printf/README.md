@@ -52,7 +52,7 @@ As this is quite a straightforward approach at printf, there are a few limitatio
 * Our ft_printf does not have buffer management, unlike the real printf
 * This implementation of printf doesn't handle overflows and unexpected inputs the same way the real printf would
 * Our ft_printf isn't nearly as powerful as the real prinft since many features are not included
-* Since our ft_printf relies on our personal libft library, which makes it slower in performance when compared to the original printf
+* ft_printf relies on our personal libft library, which makes it slower in performance when compared to the original printf
 
 ## Installation
 
