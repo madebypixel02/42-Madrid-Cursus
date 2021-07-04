@@ -2,7 +2,7 @@
 
 Because ft_putstr & ft_putnbr aren't enough :stuck_out_tongue_winking_eye:
 
-## Table of Contents
+### Table of Contents
 
 * [ft_print what?](#ft_print-what)
 * [Capabilities](#capabilities)
@@ -10,10 +10,10 @@ Because ft_putstr & ft_putnbr aren't enough :stuck_out_tongue_winking_eye:
 * [Installation](#installation)
 * [Summary](#summary)
 
-### ft_print what?
+## ft_print what?
 Printf is likely one of the most popular commands people see when learning a new programming language, and for a good reason. They are easy to understand and very powerful too. This is why learning to implement our own version of printf can help us better understand what happens internally when entering ``printf("Hello World")``!
 
-### Capabilities
+## Capabilities
 Our version of the printf function will be called ``ft_printf``, and will be able to work with the following inputs:
 ```
 Specifiers:
@@ -45,7 +45,7 @@ The general idea of the function is to iterate over ``str`` and print normally u
 %[Flags][Width].[Precision][Specifier]
 ```
 
-### Limitations
+## Limitations
 
 As this is quite a straightforward approach at printf, there are a few limitations to consider, namely:
 
@@ -54,7 +54,7 @@ As this is quite a straightforward approach at printf, there are a few limitatio
 * Our ft_printf isn't nearly as powerful as the real prinft since many features are not included
 * Since our ft_printf relies on our personal libft library, which makes it slower in performance when compared to the original printf
 
-### Installation
+## Installation
 
 In order for you to test this printf, you'll need the following dependencies:
 
@@ -77,7 +77,7 @@ make git	Stages every modified file to commit and pushes to upstream branch
 
 ```
 
-### Summary
+## Summary
 
 This was my second project as a 42 student in Madrid. Looking forward to the new projects coming next!
 July 4th, 20201
