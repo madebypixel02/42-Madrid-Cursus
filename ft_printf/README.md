@@ -28,10 +28,10 @@ Specifiers:
 Flags:
 	Width		Specifies the minimum width of the printed variable (adds spaces when necessary)
 	Precision	Selects the minimum number of elements of the variable that are printed (Eg. number of chars from a string)
-	-			Pads text to the left (adds spaces to the right)
-	0			Pads text with zeroes instead of spaces
-	.			Separates Width and Precision
-	*			Indicates that the Width or the Precision will be specified using an additional variable
+	-		Pads text to the left (adds spaces to the right)
+	0		Pads text with zeroes instead of spaces
+	.		Separates Width and Precision
+	*		Indicates that the Width or the Precision will be specified using an additional variable
 ```
 
 Our ft_printf function has the following prototype:
