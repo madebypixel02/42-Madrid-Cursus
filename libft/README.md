@@ -55,9 +55,9 @@ For this part we implemented a struct defining the well-known linked lists
 ```C
 typedef	struct	s_list
 {
-	void			*content;
+	void		*content;
 	struct	s_list	*next;
-}				t_list;
+}			t_list;
 ```
 
 Bonus functions to implement
