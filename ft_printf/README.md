@@ -56,14 +56,14 @@ As this is quite a straightforward approach at printf, there are a few limitatio
 
 ## Installation
 
-In order for you to test this printf, you'll need the following dependencies:
+In order for you to test this printf, it is recommended that you install the following dependencies:
 
 ```
-gcc clang python-norminette
+gcc clang python-norminette make
 ```
 
 * Testing the ft_printf function
-```
+```shell
 git clone https://github.com/madebypixel02/42-Madrid-Cursus.git
 cd 42-Madrid-Cursus/ft_printf
 make
@@ -72,9 +72,9 @@ Feel free to replace your own libft inside the ``ft_printf`` folder
 
 * Usage:
 ```
+make all	Compiles the ft_printf.h file
 make test	Compiles ft_printf and libft with the main.c inside the tests/ folder. [DEPRECATED] Checks for leaks in Mac and Linux (Uses valgrind command in linux)
 make git	Stages every modified file to commit and pushes to upstream branch
-
 ```
 
 ## Summary
