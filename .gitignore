@@ -4,6 +4,7 @@ printfTester/
 pft_2019/
 pft/
 42TESTERS-PRINTF/
+gnlTester/
 a.out
 *.o
 *.so
