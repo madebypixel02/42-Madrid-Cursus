@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/07 13:56:04 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/07 21:30:23 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,14 @@ test: all
 	@$(CC) main.o $(NAME)
 	./a.out $(UNAME) | cat -e
 	@$(RM) main.o a.out
+	@$(ECHO) "$(GREEN)Test Complete!$(DEFAULT)"
+
+test2: all
+	@$(ECHO) "$(YELLOW)Performing test with custom main...$(DEFAULT)"
+	@$(CC) -c tests/main2.c
+	@$(CC) main2.o $(NAME)
+	./a.out $(UNAME) | cat -e
+	@$(RM) main2.o a.out
 	@$(ECHO) "$(GREEN)Test Complete!$(DEFAULT)"
 
 clean:
