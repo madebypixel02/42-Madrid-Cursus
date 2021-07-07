@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:24:33 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/10 13:05:41 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/07 13:46:11 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_printf(const char *str, ...)
 		if (*str == '%')
 		{
 			if (*(++str))
-				count += ft_parse((char *)str, ap, count);
+				count += ft_parse((char *)str, ap);
 			while (*str && !ft_strchr(SPECIFIERS, *str))
 				str++;
 		}

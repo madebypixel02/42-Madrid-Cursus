@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/10 18:17:21 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/07 13:45:06 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ static t_format	ft_parse_precision(char *str, va_list ap, t_format f)
 	return (f);
 }
 
-int	ft_parse(char *str, va_list	ap, int count)
+int	ft_parse(char *str, va_list	ap)
 {
 	t_format	new_format;
 
@@ -93,7 +93,5 @@ int	ft_parse(char *str, va_list	ap, int count)
 	}
 	new_format.specifier = *str;
 	new_format.neg_prec = new_format.precision < 0;
-	if (new_format.specifier == 'n')
-		return (ft_print_n(ap, count));
 	return (ft_print_format(new_format, ap));
 }
