@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/07 11:51:41 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/07 12:33:23 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,11 +43,10 @@ all: $(NAME)
 	@$(ECHO) "$(GREEN)$(NAME) Compilation Complete!$(DEFAULT)"
 
 $(NAME): $(OBJ_M) $(LIBFT)
-	@$(ECHO) "$(BLUE)Compiling $(NAME)...$(DEFAULT)"
 	@$(AR) $(NAME) $(OBJ_M)
 
 $(OBJ_M): $(SRC_M)
-	@$(ECHO) "$(RED)Mandatory objects outdated in ft_printf! Rebuilding...$(DEFAULT)"
+	@$(ECHO) "$(RED)Mandatory objects outdated in ft_printf! Compiling again...$(DEFAULT)"
 	@$(CC) $(CFLAGS) -c $(SRC_M)
 
 bonus: $(OBJ_B) $(OBJ_M)
@@ -55,7 +54,7 @@ bonus: $(OBJ_B) $(OBJ_M)
 	@$(ECHO) "$(GREEN)Bonuses Compilation Complete in ft_printf!$(DEFAULT)"
 
 $(OBJ_B): $(SRC_B)
-	@$(ECHO) "$(RED)Bonus objects outdated in ft_printf! Rebuilding...$(DEFAULT)"
+	@$(ECHO) "$(RED)Bonus objects outdated in ft_printf! Compiling again...$(DEFAULT)"
 	@$(CC) $(CFLAGS) -c $(SRC_B)
 
 $(LIBFT):

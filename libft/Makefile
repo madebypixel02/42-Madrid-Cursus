@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/07 10:28:33 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/07 11:52:08 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/07 12:33:34 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,11 +91,10 @@ all: $(NAME)
 	@$(ECHO) "$(GREEN)$(NAME) Compilation Complete!$(DEFAULT)"
 
 $(NAME) : $(OBJ_M)
-	@$(ECHO) "$(BLUE)Compiling $(NAME)...$(DEFAULT)"
 	@$(AR) $(NAME) $(OBJ_M)
 
 $(OBJ_M): $(SRC_M)
-	@$(ECHO) "$(RED)Mandatory objects outdated in libft! Rebuilding...$(DEFAULT)"
+	@$(ECHO) "$(RED)Mandatory objects outdated in libft! Compiling again...$(DEFAULT)"
 	@$(CC) $(CFLAGS) -c $(SRC_M)
 
 bonus: $(OBJ_M) $(OBJ_B)
@@ -103,7 +102,7 @@ bonus: $(OBJ_M) $(OBJ_B)
 	@$(ECHO) "$(GREEN)Bonuses Compilation Complete in libft!$(DEFAULT)"
 
 $(OBJ_B): $(SRC_B)
-	@$(ECHO) "$(RED)Bonus objects outdated in libft! Rebuilding...$(DEFAULT)"
+	@$(ECHO) "$(RED)Bonus objects outdated in libft! Compiling again...$(DEFAULT)"
 	@$(CC) $(CFLAGS) -c $(SRC_M) $(SRC_B)
 
 clean:
