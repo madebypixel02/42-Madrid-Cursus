@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 14:01:05 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/10 18:25:11 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/07 07:36:53 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,5 @@ int	ft_print_n(va_list ap, int count)
 
 	n = va_arg(ap, int *);
 	*n = count;
-	return (0);
-}
-
-int	ft_print_f(t_format f, va_list ap)
-{
-	f.precision = va_arg(ap, int);
 	return (0);
 }
