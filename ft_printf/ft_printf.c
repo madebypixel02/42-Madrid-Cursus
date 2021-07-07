@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:24:33 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/07/07 13:46:11 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/07 21:17:59 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	ft_printf(const char *str, ...)
 {
 	int			count;
 	va_list		ap;
+	char		*first;
 
 	count = 0;
 	va_start(ap, str);
@@ -23,10 +24,13 @@ int	ft_printf(const char *str, ...)
 	{
 		if (*str == '%')
 		{
+			first = (char *)str;
 			if (*(++str))
 				count += ft_parse((char *)str, ap);
 			while (*str && !ft_strchr(SPECIFIERS, *str))
 				str++;
+			if (!(*str))
+				str = first;
 		}
 		else
 			count += ft_putchar_fd(*str, 1);
@@ -41,6 +45,7 @@ int	ft_print_format(t_format f, va_list ap)
 {
 	int	count;
 
+	count = 0;
 	if (f.specifier == 'c' || f.specifier == '%')
 		count = ft_print_c_pct(f, ap);
 	if (f.specifier == 's')
