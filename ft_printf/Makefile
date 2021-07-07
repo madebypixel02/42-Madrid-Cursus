@@ -6,22 +6,26 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/07 10:58:15 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/07 11:48:56 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Color Aliases
-DEFAULT="\\e[39m"
-GRAY="\\e[90m"
-RED="\\e[91m"
-GREEN="\\e[92m"
-YELLOW="\\e[93m"
-BLUE="\\e[94m"
-MAGENTA="\\e[95m"
-CYAN="\\e[96m"
-WHITE="\\e[97m"
+DEFAULT = \033[0;39m
+GRAY = \033[1;90m
+RED = \033[1;91m
+GREEN = \033[1;92m
+YELLOW = \033[1;93m
+BLUE = \033[1;94m
+MAGENTA = \033[1;95m
+CYAN = \033[1;96m
+WHITE = \033[1;97m
 
 UNAME = $(shell uname -s)
+ECHO = echo
+ifeq ($(UNAME), Linux)
+	ECHO = echo -e
+endif
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 CC = gcc
@@ -36,22 +40,22 @@ OBJ_M = $(SRC_M:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
 
 all: $(NAME)
-	@echo -e "$(GREEN)$(NAME) Compilation Complete!$(DEFAULT)"
+	@$(ECHO) "$(GREEN)$(NAME) Compilation Complete!$(DEFAULT)"
 
 $(NAME): $(OBJ_M) $(LIBFT)
-	@echo -e "$(BLUE)Compiling $(NAME)...$(DEFAULT)"
+	@$(ECHO) "$(BLUE)Compiling $(NAME)...$(DEFAULT)"
 	@$(AR) $(NAME) $(OBJ_M)
 
 $(OBJ_M): $(SRC_M)
-	@echo -e "$(RED)Mandatory objects outdated in ft_printf! Rebuilding...$(DEFAULT)"
+	@$(ECHO) "$(RED)Mandatory objects outdated in ft_printf! Rebuilding...$(DEFAULT)"
 	@$(CC) $(CFLAGS) -c $(SRC_M)
 
 bonus: $(OBJ_B) $(OBJ_M)
 	@$(AR) $(NAME) $(OBJ_B) $(OBJ_M)
-	@echo -e "$(GREEN)Bonuses Compilation Complete in ft_printf!$(DEFAULT)"
+	@$(ECHO) "$(GREEN)Bonuses Compilation Complete in ft_printf!$(DEFAULT)"
 
 $(OBJ_B): $(SRC_B)
-	@echo -e "$(RED)Bonus objects outdated in ft_printf! Rebuilding...$(DEFAULT)"
+	@$(ECHO) "$(RED)Bonus objects outdated in ft_printf! Rebuilding...$(DEFAULT)"
 	@$(CC) $(CFLAGS) -c $(SRC_B)
 
 $(LIBFT):
@@ -59,15 +63,15 @@ $(LIBFT):
 	@cp libft/$(LIBFT) $(NAME)
 
 test: all
-	@echo -e "$(YELLOW)Performing test with custom main...$(DEFAULT)"
+	@$(ECHO) "$(YELLOW)Performing test with custom main...$(DEFAULT)"
 	@$(CC) -c tests/main.c
 	@$(CC) main.o $(NAME)
 	./a.out $(UNAME) | cat -e
 	@$(RM) main.o a.out
-	@echo -e "$(GREEN)Test Complete!$(DEFAULT)"
+	@$(ECHO) "$(GREEN)Test Complete!$(DEFAULT)"
 
 clean:
-	@echo -e "$(BLUE)Cleaning up object files in ft_printf...$(DEFAULT)"
+	@$(ECHO) "$(BLUE)Cleaning up object files in ft_printf...$(DEFAULT)"
 	@make clean -C libft
 	@$(RM) $(OBJ_M) $(OBJ_B)
 
@@ -75,8 +79,8 @@ fclean: clean
 	@$(RM) $(LIBFT)
 	@$(RM) libft/$(LIBFT)
 	@$(RM) $(NAME)
-	@echo -e "$(CYAN)Removed $(NAME)$(DEFAULT)"
-	@echo -e "$(CYAN)Removed $(LIBFT)$(DEFAULT)"
+	@$(ECHO) "$(CYAN)Removed $(NAME)$(DEFAULT)"
+	@$(ECHO) "$(CYAN)Removed $(LIBFT)$(DEFAULT)"
 
 git:
 	git add ../.
@@ -84,6 +88,6 @@ git:
 	git push
 
 re: fclean all
-	@echo -e "$(YELLOW)Cleaned and Rebuilt Everything for $(NAME)!$(DEFAULT)"
+	@$(ECHO) "$(YELLOW)Cleaned and Rebuilt Everything for $(NAME)!$(DEFAULT)"
 
 .PHONY: all clean fclean bonus re git
