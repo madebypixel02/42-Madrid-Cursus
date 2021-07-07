@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:37:37 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/07/07 13:47:06 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/07 21:21:06 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,11 @@ void	check_leaks(int argc, char *uname)
 
 int	main(int argc, char **argv)
 {
-	int	n;
-
 	if (argc == 2)
 		check_leaks(argc, argv[1]);
 	else
 	{
-		printf("Len: %d\n", ft_printf("ft_printf: %\\n", 1));
-		printf("Len: %d\n", printf("printf: %\\n", 1));
+		printf("Len: %d\n", ft_printf("ft_printf: %Z\\n", 1));
+		printf("Len: %d\n", printf("og_printf: %Z\\n", 1));
 	}
 }
