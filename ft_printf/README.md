@@ -6,6 +6,7 @@ Because ft_putstr & ft_putnbr aren't enough :stuck_out_tongue_winking_eye:
 
 * [ft_print what?](#ft_print-what)
 * [Capabilities](#capabilities)
+* [Bonuses](#bonuses)
 * [Limitations](#limitations)
 * [Installation](#installation)
 * [Summary](#summary)
@@ -45,6 +46,14 @@ The general idea of the function is to iterate over ``str`` and print normally u
 %[Flags][Width].[Precision][Specifier]
 ```
 
+## Bonuses
+As of July 2021, the subject for this project has changed, and the flags ``-0.`` are now part of the bonuses. Also the ``*`` flag is gone entirely, though I have decided to keep it in my version of the code, since it took a while to implement and I wish to keep it. Other flags we need to implement in this bonus part are:
+```
+#		Adds "0X" and "0x" to conversions with the %X and %x specifiers for values other than zero
+(space)	A blank space is added provided no sign is specified
++		Adds a plus sign in front positive numbers
+```
+
 ## Limitations
 
 As this is quite a straightforward approach at printf, there are a few limitations to consider, namely:
@@ -81,4 +90,4 @@ make git	Stages every modified file to commit and pushes to upstream branch
 
 This was my second project as a 42 student in Madrid. Looking forward to the new projects coming next!
 
-July 4th, 2021
+July 9th, 2021
