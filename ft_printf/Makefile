@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/08 11:06:09 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/08 13:25:01 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,7 @@ $(NAME): $(OBJ_M) $(LIBFT)
 $(OBJ_M): $(SRC_M)
 	@$(ECHO) "$(RED)Mandatory objects outdated in ft_printf! Compiling again...$(DEFAULT)"
 	@$(CC) $(CFLAGS) -c $(SRC_M)
-	@mv -f *.o lib/
+	@mv -f ft_format.o ft_parse.o ft_print_chars.o ft_print_hex.o ft_print_nbrs.o ft_printf.o lib
 
 bonus: $(OBJ_B) $(LIBFT)
 	@$(AR) $(NAME) $(OBJ_B)
@@ -79,7 +79,7 @@ bonus: $(OBJ_B) $(LIBFT)
 $(OBJ_B): $(SRC_B)
 	@$(ECHO) "$(RED)Bonus objects outdated in ft_printf! Compiling again...$(DEFAULT)"
 	@$(CC) $(CFLAGS) -c $(SRC_B)
-	@mv -f *_bonus.o lib/
+	@mv -f ft_format_bonus.o ft_parse_bonus.o ft_print_chars_bonus.o ft_print_hex_bonus.o ft_print_nbrs_bonus.o ft_printf_bonus.o lib
 
 $(LIBFT):
 	@make all -C libft
