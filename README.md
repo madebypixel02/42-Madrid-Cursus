@@ -1,4 +1,4 @@
-# 42 Madrid
+# 42 Madrid Cursus
 My Personal Repository for the various projects from 42. Born2Code! :computer: :grin:
 
 
