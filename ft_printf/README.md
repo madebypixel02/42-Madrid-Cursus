@@ -98,6 +98,7 @@ make git	Stages every modified file to commit and pushes to upstream branch
 ![make re (ft_printf)](https://i.imgur.com/hmeMA9f.png)
 
 ![make re (ft_printf)](https://i.imgur.com/BODJ7F8.png)
+Note: The above test performs differently in Linux and Mac OS, that's why the outputs are different. My ft_printf mimics what Mac would do
 
 
 ## Summary
