@@ -95,7 +95,7 @@ make git	Stages every modified file to commit and pushes to upstream branch
 
 * Example:
 
-![make re (ft_printf)](https://i.imgur.com/h8zo9WB.png)
+![make re (ft_printf)](https://i.imgur.com/hmeMA9f.png)
 
 
 ## Summary
