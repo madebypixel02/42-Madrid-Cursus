@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/17 09:11:41 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/07/08 17:15:38 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/08 22:27:56 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 # define FT_PRINTF_H
 
-# include "../libft/libft.h"
+# include "../libft/lib/libft.h"
 # include <stdarg.h>
 
 typedef struct s_format
