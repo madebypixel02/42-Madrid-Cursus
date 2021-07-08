@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/08 17:59:16 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/08 18:41:02 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -112,6 +112,10 @@ fclean: clean
 	@$(RM) $(NAME)
 	@$(ECHO) "$(CYAN)Removed $(NAME)$(DEFAULT)"
 	@$(ECHO) "$(CYAN)Removed $(LIBFT)$(DEFAULT)"
+
+norminette:
+	@norminette -R CheckForbiddenSourceHeader $(SRC_M) $(SRC_B) lib/ft_printf.h
+	@make norminette -C libft/
 
 git:
 	git add ../.
