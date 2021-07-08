@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/07 10:28:33 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/08 22:40:29 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/08 22:41:20 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,7 @@ SRC_B = bonus/ft_lstadd_back.c	\
 	bonus/ft_lstnew.c	\
 	bonus/ft_lstmap.c
 
-OBJ_M =	lib/ft_atoi.o lib/ft_bzero.o		\
+OBJ_M =	lib/ft_atoi.o lib/ft_bzero.o			\
 	lib/ft_calloc.o lib/ft_nbrlen.o			\
 	lib/ft_isspace.o lib/ft_itoa.o			\
 	lib/ft_uitoa.o lib/ft_memccpy.o			\
@@ -92,7 +92,7 @@ OBJ_B = lib/ft_lstadd_back.o	\
 	lib/ft_lstiter.o	\
 	lib/ft_lstlast.o	\
 	lib/ft_lstsize.o	\
-	lib/ft_lstnew.o	\
+	lib/ft_lstnew.o		\
 	lib/ft_lstmap.o
 
 all: $(NAME)
