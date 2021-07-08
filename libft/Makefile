@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/07 10:28:33 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/08 22:41:20 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/08 22:41:50 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,7 +104,7 @@ $(NAME) : $(OBJ_M)
 $(OBJ_M): $(SRC_M)
 	@$(ECHO) "$(RED)Mandatory objects outdated in libft! Compiling again...$(DEFAULT)"
 	@$(CC) $(CFLAGS) -c $(SRC_M)
-	@mv -f ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o	ft_isascii.o			\
+	@mv -f ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o				\
 		ft_isdigit.o ft_isprint.o ft_isspace.o ft_itoa.o ft_max.o ft_memccpy.o ft_memchr.o		\
 		ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_nbrlen.o ft_putchar_fd.o			\
 		ft_putendl_fd.o ft_putnbr_fd.o ft_putnchar_fd.o ft_putstr_fd.o ft_putstrn_fd.o ft_split.o	\
