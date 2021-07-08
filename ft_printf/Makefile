@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/08 10:35:36 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/08 11:06:09 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,19 +47,19 @@ SRC_B = bonus/ft_printf_bonus.c				\
 		bonus/ft_print_nbrs_bonus.c		\
 		bonus/ft_print_hex_bonus.c
 
-OBJ_M = objects/ft_printf.o				\
-		objects/ft_format.o			\
-		objects/ft_parse.o			\
-		objects/ft_print_chars.o		\
-		objects/ft_print_nbrs.o			\
-		objects/ft_print_hex.o
+OBJ_M = lib/ft_printf.o				\
+		lib/ft_format.o			\
+		lib/ft_parse.o			\
+		lib/ft_print_chars.o		\
+		lib/ft_print_nbrs.o			\
+		lib/ft_print_hex.o
 
-OBJ_B = objects/ft_printf_bonus.o			\
-		objects/ft_format_bonus.o		\
-		objects/ft_parse_bonus.o		\
-		objects/ft_print_chars_bonus.o		\
-		objects/ft_print_nbrs_bonus.o		\
-		objects/ft_print_hex_bonus.o
+OBJ_B = lib/ft_printf_bonus.o			\
+		lib/ft_format_bonus.o		\
+		lib/ft_parse_bonus.o		\
+		lib/ft_print_chars_bonus.o		\
+		lib/ft_print_nbrs_bonus.o		\
+		lib/ft_print_hex_bonus.o
 
 all: $(NAME)
 	@$(ECHO) "$(GREEN)$(NAME) Compilation Complete!$(DEFAULT)"
@@ -70,7 +70,7 @@ $(NAME): $(OBJ_M) $(LIBFT)
 $(OBJ_M): $(SRC_M)
 	@$(ECHO) "$(RED)Mandatory objects outdated in ft_printf! Compiling again...$(DEFAULT)"
 	@$(CC) $(CFLAGS) -c $(SRC_M)
-	@mv -f *.o objects/
+	@mv -f *.o lib/
 
 bonus: $(OBJ_B) $(LIBFT)
 	@$(AR) $(NAME) $(OBJ_B)
@@ -79,7 +79,7 @@ bonus: $(OBJ_B) $(LIBFT)
 $(OBJ_B): $(SRC_B)
 	@$(ECHO) "$(RED)Bonus objects outdated in ft_printf! Compiling again...$(DEFAULT)"
 	@$(CC) $(CFLAGS) -c $(SRC_B)
-	@mv -f *_bonus.o objects/
+	@mv -f *_bonus.o lib/
 
 $(LIBFT):
 	@make all -C libft
