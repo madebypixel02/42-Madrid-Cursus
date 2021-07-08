@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/07 21:30:23 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/08 08:48:58 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ $(OBJ_M): $(SRC_M)
 	@$(ECHO) "$(RED)Mandatory objects outdated in ft_printf! Compiling again...$(DEFAULT)"
 	@$(CC) $(CFLAGS) -c $(SRC_M)
 
-bonus: $(OBJ_B) $(OBJ_M)
+bonus: $(OBJ_B) $(OBJ_M) $(LIBFT)
 	@$(AR) $(NAME) $(OBJ_B) $(OBJ_M)
 	@$(ECHO) "$(GREEN)Bonuses Compilation Complete in ft_printf!$(DEFAULT)"
 
@@ -73,7 +73,7 @@ test2: all
 	@$(ECHO) "$(YELLOW)Performing test with custom main...$(DEFAULT)"
 	@$(CC) -c tests/main2.c
 	@$(CC) main2.o $(NAME)
-	./a.out $(UNAME) | cat -e
+	./a.out | cat -e
 	@$(RM) main2.o a.out
 	@$(ECHO) "$(GREEN)Test Complete!$(DEFAULT)"
 
