@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/07 10:28:33 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/08 22:41:50 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/08 22:51:50 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -114,7 +114,7 @@ $(OBJ_M): $(SRC_M)
 
 bonus: $(OBJ_M) $(OBJ_B)
 	@$(AR) $(NAME) $(OBJ_M) $(OBJ_B)
-	@$(ECHO) "$(GREEN)Bonuses Compilation Complete in libft!$(DEFAULT)"
+	@$(ECHO) "$(MAGENTA)Bonuses Compilation Complete in libft!$(DEFAULT)"
 
 $(OBJ_B): $(SRC_B)
 	@$(ECHO) "$(RED)Bonus objects outdated in libft! Compiling again...$(DEFAULT)"
