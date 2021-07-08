@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/08 13:25:01 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/08 17:59:16 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,14 +51,14 @@ OBJ_M = lib/ft_printf.o				\
 		lib/ft_format.o			\
 		lib/ft_parse.o			\
 		lib/ft_print_chars.o		\
-		lib/ft_print_nbrs.o			\
+		lib/ft_print_nbrs.o		\
 		lib/ft_print_hex.o
 
 OBJ_B = lib/ft_printf_bonus.o			\
 		lib/ft_format_bonus.o		\
 		lib/ft_parse_bonus.o		\
-		lib/ft_print_chars_bonus.o		\
-		lib/ft_print_nbrs_bonus.o		\
+		lib/ft_print_chars_bonus.o	\
+		lib/ft_print_nbrs_bonus.o	\
 		lib/ft_print_hex_bonus.o
 
 all: $(NAME)
