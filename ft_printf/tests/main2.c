@@ -1,6 +1,6 @@
 /* main test to ft_printf leaks*/
 
-#include "../ft_printf.h"
+#include "../lib/ft_printf.h"
 #include <stdio.h>
 #include <limits.h>
 
