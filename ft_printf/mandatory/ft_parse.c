@@ -6,11 +6,11 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:42:32 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/07/08 09:09:38 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/08 09:47:12 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../lib/ft_printf.h"
 
 static t_format	ft_parse_width(char *str, va_list	ap, t_format f)
 {

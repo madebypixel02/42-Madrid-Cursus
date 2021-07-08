@@ -6,11 +6,11 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 08:52:18 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/05/10 18:17:56 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/08 09:46:47 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../lib/ft_printf.h"
 
 t_format	ft_newformat(void)
 {

@@ -6,11 +6,11 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 10:43:07 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/07/07 22:06:46 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/08 09:47:35 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../lib/ft_printf.h"
 
 int	ft_print_c_pct(t_format f, va_list ap)
 {
