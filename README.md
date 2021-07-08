@@ -6,9 +6,8 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 
 * Repo Stats
 
-![Release Date](https://img.shields.io/github/release-date/madebypixel02/42-Madrid-Cursus)
 ![GitHub Repo Size](https://img.shields.io/github/repo-size/madebypixel02/42-Madrid-Cursus)
-![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/42-Madrid-Cursus)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/42-Madrid-Cursus/beta)
 [![GitHub Issues](https://img.shields.io/github/issues/madebypixel02/42-Madrid-Cursus)](https://GitHub.com/madebypixel02/42-Madrid-Cursus/issues/)
 
 
