@@ -93,9 +93,11 @@ make bonus	Compiles all bonus files instead of the mandatory ones
 make git	Stages every modified file to commit and pushes to upstream branch
 ```
 
-* Example:
+* Examples:
 
 ![make re (ft_printf)](https://i.imgur.com/hmeMA9f.png)
+
+![make re (ft_printf)](https://i.imgur.com/BODJ7F8.png)
 
 
 ## Summary
