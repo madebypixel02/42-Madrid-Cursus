@@ -67,9 +67,10 @@ As this is quite a straightforward approach at printf, there are a few limitatio
 
 In order for you to test this printf, it is recommended that you install the following dependencies:
 
-```
+```shell
 gcc clang python-norminette make
 ```
+For Linux users, it is also recommended to install ``valgrind`` (Leak checker)
 
 * Testing the ft_printf function
 ```shell
@@ -86,8 +87,8 @@ The makefile compiles all files from the ``mandatory/`` or ``bonus/`` folders an
 
 ```
 make all	Compiles the libftprintf.a file
-make test	Compiles ft_printf and libft with the main.c inside the tests/ folder. Also checks for leaks in Mac and Linux (Requires valgrind command in linux)
-make test2	Another test from a fellow 42 student, also checks for leaks
+make test	Compiles ft_printf and libft with the main.c inside the tests/ folder. Checks for leaks in Mac and Linux
+make test2	Another test from a fellow 42 student, also checks for leaks (Mac only)
 make bonus	Compiles all bonus files instead of the mandatory ones
 make git	Stages every modified file to commit and pushes to upstream branch
 ```
