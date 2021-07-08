@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/08 10:15:48 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/08 10:26:27 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,32 +33,32 @@ AR = ar rcs
 LIBFT = libft.a
 NAME = libftprintf.a
 
-SRC_M = mandatory/ft_printf.c			\
+SRC_M = mandatory/ft_printf.c				\
 		mandatory/ft_format.c			\
 		mandatory/ft_parse.c			\
 		mandatory/ft_print_chars.c		\
 		mandatory/ft_print_nbrs.c		\
 		mandatory/ft_print_hex.c
 
-SRC_B = bonus/ft_printf_bonus.c			\
+SRC_B = bonus/ft_printf_bonus.c				\
 		bonus/ft_format_bonus.c			\
 		bonus/ft_parse_bonus.c			\
-		bonus/ft_print_chars_bonus.c	\
+		bonus/ft_print_chars_bonus.c		\
 		bonus/ft_print_nbrs_bonus.c		\
 		bonus/ft_print_hex_bonus.c
 
 OBJ_M = objects/ft_printf.o				\
-		objects/ft_format.o				\
-		objects/ft_parse.o				\
+		objects/ft_format.o			\
+		objects/ft_parse.o			\
 		objects/ft_print_chars.o		\
 		objects/ft_print_nbrs.o			\
 		objects/ft_print_hex.o
 
-OBJ_B = objects/ft_printf_bonus.o		\
+OBJ_B = objects/ft_printf_bonus.o			\
 		objects/ft_format_bonus.o		\
 		objects/ft_parse_bonus.o		\
-		objects/ft_print_chars_bonus.o	\
-		objects/ft_print_nbrs_bonus.o	\
+		objects/ft_print_chars_bonus.o		\
+		objects/ft_print_nbrs_bonus.o		\
 		objects/ft_print_hex_bonus.o
 
 all: $(NAME)
