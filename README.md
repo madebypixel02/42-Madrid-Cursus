@@ -10,7 +10,9 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/42-Madrid-Cursus)
 [![GitHub Issues](https://img.shields.io/github/issues/madebypixel02/42-Madrid-Cursus)](https://GitHub.com/madebypixel02/42-Madrid-Cursus/issues/)
 
+
 * 42 Cursus Stats
+
 [![jaeskim's 42 stats](https://badge42.herokuapp.com/api/stats/aperez-b)](https://github.com/JaeSeoKim/badge42)
 
 
