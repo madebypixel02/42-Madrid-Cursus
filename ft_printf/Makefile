@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/17 09:03:14 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/08 10:26:27 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/08 10:35:36 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,8 +72,8 @@ $(OBJ_M): $(SRC_M)
 	@$(CC) $(CFLAGS) -c $(SRC_M)
 	@mv -f *.o objects/
 
-bonus: $(OBJ_B) $(OBJ_M) $(LIBFT)
-	@$(AR) $(NAME) $(OBJ_B) $(OBJ_M)
+bonus: $(OBJ_B) $(LIBFT)
+	@$(AR) $(NAME) $(OBJ_B)
 	@$(ECHO) "$(GREEN)Bonuses Compilation Complete in ft_printf!$(DEFAULT)"
 
 $(OBJ_B): $(SRC_B)
