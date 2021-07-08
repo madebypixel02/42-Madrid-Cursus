@@ -18,8 +18,8 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 
 ## Project List
 
-| Project | Status |
-| ------- | ------ |
-| libft | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/Libft)](https://github.com/JaeSeoKim/badge42) |
-| ft_printf | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/ft_printf)](https://github.com/JaeSeoKim/badge42) |
-| get_next_line | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/get_next_line)](https://github.com/JaeSeoKim/badge42) |
+| Project | About | Date | Status |
+| ------- | ----- | ---- | ------ |
+| [libft](https://github.com/madebypixel02/42-Madrid-Cursus/tree/master/libft) | Your very first own library | April 2021 | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/Libft)](https://github.com/JaeSeoKim/badge42) |
+| [ft_printf](https://github.com/madebypixel02/42-Madrid-Cursus/tree/master/ft_printf) | Because putnbr and putstr aren’t enough | July 2021 | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/ft_printf)](https://github.com/JaeSeoKim/badge42) |
+| [get_next_line](https://github.com/madebypixel02/42-Madrid-Cursus/tree/master/get_next_line) | Reading a line on a fd is way too tedious | N/A | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/get_next_line)](https://github.com/JaeSeoKim/badge42) |
