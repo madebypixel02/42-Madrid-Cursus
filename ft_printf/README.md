@@ -92,7 +92,8 @@ make test2	Another test from a fellow 42 student, also checks for leaks (Mac onl
 make bonus	Compiles all bonus files instead of the mandatory ones
 make git	Stages every modified file to commit and pushes to upstream branch
 ```
-
+* Example:
+![make re (ft_printf)](https://imgur.com/h8zo9WB)
 
 ## Summary
 
