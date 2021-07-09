@@ -86,6 +86,16 @@ cd 42-Madrid-Cursus/libft
 make
 ```
 
+* Usage:
+
+The makefile compiles all files from the ``mandatory/`` or ``bonus/`` folders and saves the object files to the ``lib/`` folder. It then generates the output file ``libft.a``. Here are some of the commands you can try:
+
+```
+make all		Compiles the libft.a file
+make bonus		Compiles all bonus files instead of the mandatory ones
+make norminette	Checks Norm for All .c and .h files in the libft/ folder	
+```
+
 ## Summary
 Really enjoyed this first project, can't wait for the next one :wink:
 

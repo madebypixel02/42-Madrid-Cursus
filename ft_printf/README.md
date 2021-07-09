@@ -86,11 +86,12 @@ Feel free to replace your own libft inside the ``ft_printf`` folder
 The makefile compiles all files from the ``mandatory/`` or ``bonus/`` folders and saves the object files to the ``lib/`` folder. It then generates the output file ``libftprintf.a``. Here are some of the commands you can try:
 
 ```
-make all	Compiles the libftprintf.a file
-make test	Compiles ft_printf and libft with the main.c inside the tests/ folder. Checks for leaks in Mac and Linux
-make test2	Another test from a fellow 42 student, also checks for leaks (Mac only)
-make bonus	Compiles all bonus files instead of the mandatory ones
-make git	Stages every modified file to commit and pushes to upstream branch
+make all		Compiles the libftprintf.a file
+make test		Compiles ft_printf and libft with the main.c inside the tests/ folder. Checks for leaks in Mac and Linux
+make test2		Another test from a fellow 42 student, also checks for leaks (Mac only)
+make bonus		Compiles all bonus files instead of the mandatory ones
+make norminette	Checks Norm for both printf and libft files	
+make git		Stages every modified file to commit and pushes to upstream branch
 ```
 
 * Examples:
