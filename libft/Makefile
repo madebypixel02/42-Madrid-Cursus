@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/07 10:28:33 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/08 22:51:50 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/09 09:28:39 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -131,6 +131,7 @@ fclean: clean
 	@$(ECHO) "$(CYAN)Removed $(NAME)$(DEFAULT)"
 
 norminette:
+	@$(ECHO) "$(CYAN)Checking norm for libft...$(DEFAULT)"
 	@norminette -R CheckForbiddenSourceHeader $(SRC_M) $(SRC_B) lib/libft.h
 
 re: fclean all
