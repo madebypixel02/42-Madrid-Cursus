@@ -93,7 +93,7 @@ The makefile compiles all files from the ``mandatory/`` or ``bonus/`` folders an
 ```
 make all		Compiles the libft.a file
 make bonus		Compiles all bonus files instead of the mandatory ones
-make norminette	Checks Norm for All .c and .h files in the libft/ folder	
+make norminette		Checks Norm for All .c and .h files in the libft/ folder	
 ```
 
 ## Summary
