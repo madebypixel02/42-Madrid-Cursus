@@ -4,7 +4,7 @@ Your very own libc library :smile:
 ### Table of Contents
 * [Introduction](#introduction)
 * [Function Overview](#function-overview)
-* [Bonus](#bonus)
+* [Bonuses](#bonuses)
 * [Installation](#installation)
 * [Summary](#summary)
 
@@ -50,7 +50,7 @@ ft_tolower		Makes every uppercase character in a string lowercase
 ft_toupper		Makes every lowercase character in a string uppercase
 ```
 
-## Bonus
+## Bonuses
 For this part we implemented a struct defining the well-known linked lists
 ```C
 typedef	struct	s_list
