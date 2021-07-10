@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 10:59:42 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/07/05 11:13:10 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/10 12:50:28 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-int	get_next_line(int fd, char **line);
+char *get_next_line(int fd);
 
 #endif
