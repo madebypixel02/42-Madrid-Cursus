@@ -14,7 +14,7 @@ In this project we'll be implementing our home-made functions from libc, which w
 ## Function Overview
 ```
 ft_atoi			Reads a String, and, after ignoring spaces with ft_isspace, saves the string into an integer.
-ft_bzero		
+ft_bzero		Writes n zeroes to the string s
 ft_calloc		Reserves x blocks of y bits of memory
 ft_isalnum		Returns 1 if the input is a number or a letter in the ASCII table
 ft_isalpha		Returns 1 if the input is a letter in the ASCII table
