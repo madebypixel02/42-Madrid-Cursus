@@ -6,8 +6,10 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 10:59:17 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/07/10 12:50:06 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/11 09:05:42 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../lib/get_next_line.h"
 
 char *get_next_line(int fd);

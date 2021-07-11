@@ -6,8 +6,8 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 11:12:28 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/07/05 11:14:03 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/11 09:14:35 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../lib/get_next_line.h"
