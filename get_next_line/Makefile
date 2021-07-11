@@ -6,7 +6,7 @@
 #    By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/10 13:09:10 by aperez-b          #+#    #+#              #
-#    Updated: 2021/07/10 13:37:44 by aperez-b         ###   ########.fr        #
+#    Updated: 2021/07/11 09:12:49 by aperez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ ifeq ($(UNAME), Linux)
 endif
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
+AR = ar rcs
 CC = gcc
 NAME = get_next_line.a
 
