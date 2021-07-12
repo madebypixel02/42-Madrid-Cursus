@@ -1,15 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/05 10:59:17 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/07/11 09:05:42 by aperez-b         ###   ########.fr       */
+/*   Created: 2021/07/12 09:14:39 by aperez-b          #+#    #+#             */
+/*   Updated: 2021/07/12 11:00:16 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/get_next_line.h"
+#include "get_next_line.h"
 
-char *get_next_line(int fd);
+int	main(void)
+{
+	int	fd;
+
+	fd = open("tests/test.txt", O_RDONLY);
+	printf("%s\n", get_next_line(fd));
+}

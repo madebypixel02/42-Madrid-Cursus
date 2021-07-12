@@ -6,10 +6,13 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 10:59:17 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/07/11 09:14:19 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/12 11:00:36 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib/get_next_line.h"
+#include "get_next_line.h"
 
-char *get_next_line(int fd);
+char *get_next_line(int fd)
+{
+	return (NULL);
+}
