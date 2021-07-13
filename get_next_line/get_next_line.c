@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 10:59:17 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/07/12 12:03:19 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/13 11:15:36 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,29 @@
 
 char *get_next_line(int fd)
 {
-	size_t	nbyte;
-	static char	*buf[4096];
-	char	temp[BUFFER_SIZE + 1];
+	char	*temp;
+	char 	**line[4096];
 
-	nbyte = read(fd, temp, BUFFER_SIZE);
-	if (ft_strchr(temp, '\n'))
-	return (NULL);
+	temp = malloc(BUFFER_SIZE + 1);
+	if (!temp)
+		return (NULL);
+	temp[read(fd, temp, BUFFER_SIZE)] = '\0';
+	line[fd] = ft_split(temp, '\n');
+	free(temp);
+	return (*line[fd]);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**aux;
+	int		nwords;
+
+	if (!s)
+		return (NULL);
+	nwords = ft_count_words(s, c);
+	aux = malloc(sizeof(char *));
+	if (aux == NULL)
+		return (NULL);
+	aux = ft_split_gnl(aux, s, c);
+	return (aux);
 }

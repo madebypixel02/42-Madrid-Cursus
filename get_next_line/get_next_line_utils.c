@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 11:12:28 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/07/12 11:29:35 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/13 11:37:48 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,33 @@ size_t	ft_strlen(const char *s)
 	return (count);
 }
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	c_unsigned;
+	size_t	s_len;
+	char	*substr;
+	size_t	i;
 
-	c_unsigned = (unsigned char)c;
-	if (c_unsigned == '\0')
-		return ((char *)&s[ft_strlen(s)]);
-	while (*s != '\0')
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen(s);
+	i = 0;
+	if (len > s_len)
+		len = s_len;
+	if (start >= s_len)
 	{
-		if (*s == c_unsigned)
-			return ((char *)s);
-		s++;
+		substr = (char *)malloc(1);
+		if (substr == NULL)
+			return (NULL);
+		substr[0] = '\0';
+		return (substr);
 	}
-	return (NULL);
+	substr = (char *)malloc(len + 1);
+	if (substr == NULL)
+		return (NULL);
+	while (i++ < start)
+		s++;
+	ft_strlcpy(substr, s, len + 1);
+	return (substr);
 }
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
@@ -66,4 +79,32 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	if (size != 0)
 		dst[i] = '\0';
 	return (size_src);
+}
+
+char	*ft_strchr(const char *s, int c)
+{
+	unsigned char	c_unsigned;
+
+	c_unsigned = (unsigned char)c;
+	if (c_unsigned == '\0')
+		return ((char *)&s[ft_strlen(s)]);
+	while (*s != '\0')
+	{
+		if (*s == c_unsigned)
+			return ((char *)s);
+		s++;
+	}
+	return (NULL);
+}
+
+char	**ft_split_gnl(char **aux, char const *s, char c)
+{
+	char	*newline;
+
+	newline = ft_strchr(s, '\n');
+	while (*s)
+	{
+		if (newline)
+		s++;
+	}	
 }

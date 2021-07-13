@@ -6,7 +6,7 @@
 /*   By: aperez-b <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 09:14:39 by aperez-b          #+#    #+#             */
-/*   Updated: 2021/07/12 12:03:17 by aperez-b         ###   ########.fr       */
+/*   Updated: 2021/07/13 08:51:00 by aperez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ int	main(void)
 {
 	int	fd;
 
-	fd = open("tests/test.txt", O_RDONLY);
+	fd = open("tests/basic_oneline.txt", O_RDONLY);
 	printf("%s\n", get_next_line(fd));
 }
