@@ -6,6 +6,7 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 
 * Repo Stats
 
+![42](https://badgen.net/badge/Born2Code/aperez-b/orange?cache=86400&icon=https://meta.intra.42.fr/images/42_logo.svg)
 ![GitHub Repo Size](https://img.shields.io/github/size/madebypixel02/42-Madrid-Cursus/README.md)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/42-Madrid-Cursus/master)
 [![GitHub Issues](https://img.shields.io/github/issues/madebypixel02/42-Madrid-Cursus)](https://GitHub.com/madebypixel02/42-Madrid-Cursus/issues/)
@@ -24,3 +25,5 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 | [ft_printf](https://github.com/madebypixel02/ft_printf) | Because putnbr and putstr aren’t enough | C, Makefile | July 2021 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/ft_printf/master) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/ft_printf)](https://github.com/JaeSeoKim/badge42) |
 | [get_next_line](https://github.com/madebypixel02/get_next_line) | Reading a line on a fd is way too tedious | C | July 2021 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/get_next_line/master) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/get_next_line)](https://github.com/JaeSeoKim/badge42) |
 | [born2beroot](https://github.com/madebypixel02/born2beroot) | The wonderful world of virtualization | Shell, Virtualization | N/A | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/born2beroot/master) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/Born2beroot)](https://github.com/JaeSeoKim/badge42) |
+| [so_long](https://github.com/madebypixel02/so_long) | And thanks for all the fish! | C, Makefile | N/A | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/so_long/master) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/so_long)](https://github.com/JaeSeoKim/badge42) |
+| [push_swap](https://github.com/madebypixel02/push_swap) | Because swap_push isn’t as natural | C, Makefile | N/A | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/push_swap/master) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/push_swap)](https://github.com/JaeSeoKim/badge42) |
