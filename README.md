@@ -6,7 +6,6 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 
 * Repo Stats
 
-![42](https://badgen.net/badge/Born2Code/aperez-b/orange?cache=86400&icon=https://meta.intra.42.fr/images/42_logo.svg)
 ![GitHub Repo Size](https://img.shields.io/github/size/madebypixel02/42-Madrid-Cursus/README.md)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/42-Madrid-Cursus/master)
 [![GitHub Issues](https://img.shields.io/github/issues/madebypixel02/42-Madrid-Cursus)](https://GitHub.com/madebypixel02/42-Madrid-Cursus/issues/)
@@ -14,6 +13,7 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 
 * 42 Cursus Stats
 
+![42 Born2Code](https://badgen.net/badge/Born2Code/aperez-b/purple?cache=86400&icon=https://meta.intra.42.fr/images/42_logo.svg)
 [![jaeskim's 42 stats](https://badge42.herokuapp.com/api/stats/aperez-b)](https://github.com/JaeSeoKim/badge42)
 
 
