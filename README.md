@@ -20,8 +20,8 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 
 ## Project List
 
-|  Nº  | Project | Description | Topics | Date | Last Commit | Status |
-| :--: | :-----: | :---------: | :----: | :--: | :---------: | :----: |
+|  Nº  | Project | Description | Topics | Date | Activity | Status |
+| :--: | :-----: | :---------: | :----: | :--: | :------: | :----: |
 | 1 | [libft](https://github.com/madebypixel02/libft) | *Your very first own library* | C, Makefile, Library | April 2021 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/libft/master) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/Libft)](https://github.com/JaeSeoKim/badge42) |
 | 2 | [ft_printf](https://github.com/madebypixel02/ft_printf) | *Because putnbr and putstr aren’t enough* | C, Makefile, Print | July 2021 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/ft_printf/master) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/ft_printf)](https://github.com/JaeSeoKim/badge42) |
 | 3 | [get_next_line](https://github.com/madebypixel02/get_next_line) | *Reading a line on a *fd* is way too tedious* | C, Reading | July 2021 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/get_next_line/master) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/get_next_line)](https://github.com/JaeSeoKim/badge42) |
