@@ -11,7 +11,7 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 
 * 42 Cursus Stats
 
-![42 Born2Code](https://badgen.net/badge/Born2Code/aperez-b/purple?cache=86400&icon=https://meta.intra.42.fr/images/42_logo.svg)
+![42 Born2Code](https://badgen.net/badge/Born2Code/aperez-b/blue?cache=86400&icon=https://meta.intra.42.fr/images/42_logo.svg)
 
 [![jaeskim's 42 stats](https://badge42.herokuapp.com/api/stats/aperez-b)](https://github.com/JaeSeoKim/badge42)
 
