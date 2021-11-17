@@ -11,9 +11,11 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 
 * 42 Cursus Stats
 
-![42 Born2Code](https://badgen.net/badge/Born2Code/aperez-b/blue?cache=86400&icon=https://meta.intra.42.fr/images/42_logo.svg)
+[![42 Born2Code](https://badgen.net/badge/Born2Code/aperez-b/yellow?cache=86400&icon=https://meta.intra.42.fr/images/42_logo.svg)](https://github.com/madebypixel02/42-Madrid-Cursus)
 
-[![jaeskim's 42 stats](https://badge42.herokuapp.com/api/stats/aperez-b)](https://github.com/JaeSeoKim/badge42)
+[![42 Profile Card](https://1337-readme.vercel.app/api/profile?cursus=42&dark=true&login=aperez-b)](https://github.com/madebypixel02/42-Madrid-Cursus)
+
+[![jaeskim's 42 stats](https://badge42.herokuapp.com/api/stats/aperez-b)](https://github.com/madebypixel02/42-Madrid-Cursus)
 
 
 ## Project List
