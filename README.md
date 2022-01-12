@@ -1,6 +1,9 @@
 # 42 Madrid Cursus | aperez-b
 My Personal Repository for the various projects from 42. Born2Code! :computer: :grin:
 
+<p align="center">
+  <img src=https://user-images.githubusercontent.com/40824677/149232001-24f4623b-4f4e-4e96-859d-006f5cc8d062.png />
+</p>
 
 ## Main Stats
 
