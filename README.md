@@ -7,18 +7,19 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 
 ## Main Stats
 
-* Repo Stats
+<p align="center">
+  <img src=https://badgen.net/badge/Born2Code/aperez-b/yellow?cache=86400&icon=https://meta.intra.42.fr/images/42_logo.svg />
+  <img src=https://img.shields.io/github/size/madebypixel02/42-Madrid-Cursus/README.md />
+  <img src=https://img.shields.io/github/last-commit/madebypixel02/42-Madrid-Cursus/master />
+</p>
 
-![GitHub Repo Size](https://img.shields.io/github/size/madebypixel02/42-Madrid-Cursus/README.md)
-![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/42-Madrid-Cursus/master)
+<p align="center">
+  <img src=https://1337-readme.vercel.app/api/profile?cursus=42&dark=true&login=aperez-b />
+</p>
 
-* 42 Cursus Stats
-
-[![42 Born2Code](https://badgen.net/badge/Born2Code/aperez-b/yellow?cache=86400&icon=https://meta.intra.42.fr/images/42_logo.svg)](https://github.com/madebypixel02/42-Madrid-Cursus)
-
-[![42 Profile Card](https://1337-readme.vercel.app/api/profile?cursus=42&dark=true&login=aperez-b)](https://github.com/madebypixel02/42-Madrid-Cursus)
-
-[![jaeskim's 42 stats](https://badge42.herokuapp.com/api/stats/aperez-b)](https://github.com/madebypixel02/42-Madrid-Cursus)
+<p align="center">
+  <img src=https://badge42.herokuapp.com/api/stats/aperez-b />
+</p>
 
 
 ## Project List
