@@ -45,13 +45,13 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 | 9 | [philosophers](https://github.com/madebypixel02/philosophers) | *I’ve never thought philosophy would be so deadly* | C, Makefile, Thread, Mutex | October 2021 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/philosophers/master) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/Philosophers)](https://github.com/JaeSeoKim/badge42) |
 | 10 | [minishell](https://github.com/madebypixel02/minishell) | *As beautiful as a shell* | C, Makefile, Shell | November 2021 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/minishell/master) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/minishell)](https://github.com/JaeSeoKim/badge42) |
 | 11 | ``exam-03`` | *Rank 3 exam* | C, exam, *mini_paint*, *micro_paint* | February 2022 | 🤷‍♂️ | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/Exam%20Rank%2003)](https://github.com/JaeSeoKim/badge42) |
+| 12 | [cub3d](https://github.com/mbueno-g/cub3d) | *My first RayCaster with miniLibX* | C, Makefile, cub3d, FPS, UX | February 2022 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/mbueno-g/cub3d/main) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/cub3d)](https://github.com/JaeSeoKim/badge42) |
 
 
 ### In-Progress Projects
 
 |  Nº  | Project | Description | Topics | Finished | Activity | Status |
 | :--: | :-------: | :---------: | :----: | :------: | :------: | :----: |
-| 12 | [cub3d](https://github.com/mbueno-g/cub3d) | *My first RayCaster with miniLibX* | C, Makefile, cub3d, FPS, UX | ❌ | ![GitHub Last Commit](https://img.shields.io/github/last-commit/mbueno-g/cub3d/main) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/cub3d)](https://github.com/JaeSeoKim/badge42) |
 | 13 | [C++](https://github.com/madebypixel02/CPP-Modules) | *Lots of basic stuff* | C++, Makefile | ❌ | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/CPP-Modules/master) | [``0/9``](https://github.com/madebypixel02/CPP-Modules) |
 | 14 | [NetPractice](https://github.com/madebypixel02/NetPractice) | *Fred, there is an unplugged Ethernet cable...* | Networking | ❌ | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/NetPractice/master) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/NetPractice)](https://github.com/JaeSeoKim/badge42) |
 | 15 | ``exam-04`` | *Rank 4 exam* | C, Makefile, exam, *minishell*, *microshell* | ❌ | 🤷‍♂️ | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/Exam%20Rank%2004)](https://github.com/JaeSeoKim/badge42) |
