@@ -56,6 +56,12 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 | 14 | [NetPractice](https://github.com/madebypixel02/NetPractice) | *Fred, there is an unplugged Ethernet cable...* | Networking | ❌ | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/NetPractice/master) | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/NetPractice)](https://github.com/JaeSeoKim/badge42) |
 | 15 | ``exam-04`` | *Rank 4 exam* | C, Makefile, exam, *minishell*, *microshell* | ❌ | 🤷‍♂️ | [![aperez-b's 42Project Score](https://badge42.herokuapp.com/api/project/aperez-b/Exam%20Rank%2004)](https://github.com/JaeSeoKim/badge42) |
 
+### Side Projects
+
+| Project | Description | Topics | Finished | Activity |
+| :-----: | :---------: | :----: | :------: | :------: |
+| [DualShip Shooter](https://github.com/madebypixel02/DualshipShooter) | *Our Global Game Jam 2022 'duality' game* | C#, videogame, GGJ2022, hackathon, Unity | January 2022 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/DualshipShooter/master) |
+
 <p align="center">
   <a href="https://www.42madrid.com/en/">
     <img src="https://user-images.githubusercontent.com/40824677/150541520-93b9bbfe-cb72-4bd0-80ae-a6f5637d3a77.png">
