@@ -52,7 +52,7 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 
 |  Nº  | Project | Description | Topics | Finished | Activity | Status |
 | :--: | :-------: | :---------: | :----: | :------: | :------: | :----: |
-| 13 | [CPP Modules](https://github.com/madebypixel02/CPP-Modules) | *Lots of basic stuff* | C++, Makefile | ❌ | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/CPP-Modules/master) | [``0/9``](https://github.com/madebypixel02/CPP-Modules) |
+| 13 | [CPP Modules](https://github.com/madebypixel02/CPP-Modules) | *Lots of basic stuff* | C++, Makefile | ❌ | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/CPP-Modules/master) | [``1/9``](https://github.com/madebypixel02/CPP-Modules) |
 | 14 | [NetPractice](https://github.com/madebypixel02/NetPractice) | *Fred, there is an unplugged Ethernet cable...* | Networking | ❌ | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/NetPractice/master) | [![aperez-b's 42Project Score](https://badge42.vercel.app/api/v2/cl1kyexqa001109mf3u4zsrcw/project/2504102)](https://github.com/JaeSeoKim/badge42) |
 | 15 | ``exam-04`` | *Rank 4 exam* | C, Makefile, exam, *minishell*, *microshell* | ❌ | 🤷‍♂️ | [![aperez-b's 42Project Score](https://badge42.vercel.app/api/v2/cl1kyexqa001109mf3u4zsrcw/project/2506468)](https://github.com/JaeSeoKim/badge42) |
 
