@@ -46,15 +46,15 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 | 10 | [minishell](https://github.com/madebypixel02/minishell) | *As beautiful as a shell* | C, Makefile, Shell | November 2021 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/minishell/master) | [![aperez-b's 42Project Score](https://badge42.vercel.app/api/v2/cl1kyexqa001109mf3u4zsrcw/project/2385618)](https://github.com/JaeSeoKim/badge42) |
 | 11 | ``exam-03`` | *Rank 3 exam* | C, exam, *mini_paint*, *micro_paint* | February 2022 | 🤷‍♂️ | [![aperez-b's 42Project Score](https://badge42.vercel.app/api/v2/cl1kyexqa001109mf3u4zsrcw/project/2367840)](https://github.com/JaeSeoKim/badge42) |
 | 12 | [cub3d](https://github.com/madebypixel02/cub3d) | *My first RayCaster with miniLibX* | C, Makefile, cub3d, FPS, UX | February 2022 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/cub3d/main) | [![aperez-b's 42Project Score](https://badge42.vercel.app/api/v2/cl1kyexqa001109mf3u4zsrcw/project/2504104)](https://github.com/JaeSeoKim/badge42) |
+| 13 | ``exam-04`` | *Rank 4 exam* | C, Makefile, exam, *minishell*, *microshell* | June 2022 | 🤷‍♂️ | [![aperez-b's 42Project Score](https://badge42.vercel.app/api/v2/cl1kyexqa001109mf3u4zsrcw/project/2506468)](https://github.com/JaeSeoKim/badge42) |
 
 
 ### In-Progress Projects
 
 |  Nº  | Project | Description | Topics | Finished | Activity | Status |
 | :--: | :-------: | :---------: | :----: | :------: | :------: | :----: |
-| 13 | [CPP Modules](https://github.com/madebypixel02/CPP-Modules) | *Lots of basic stuff* | C++, Makefile | ❌ | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/CPP-Modules/master) | [``2/9``](https://github.com/madebypixel02/CPP-Modules) |
-| 14 | [NetPractice](https://github.com/madebypixel02/NetPractice) | *Fred, there is an unplugged Ethernet cable...* | Networking | ❌ | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/NetPractice/master) | [![aperez-b's 42Project Score](https://badge42.vercel.app/api/v2/cl1kyexqa001109mf3u4zsrcw/project/2504102)](https://github.com/JaeSeoKim/badge42) |
-| 15 | ``exam-04`` | *Rank 4 exam* | C, Makefile, exam, *minishell*, *microshell* | ❌ | 🤷‍♂️ | [![aperez-b's 42Project Score](https://badge42.vercel.app/api/v2/cl1kyexqa001109mf3u4zsrcw/project/2506468)](https://github.com/JaeSeoKim/badge42) |
+| 14 | [CPP Modules](https://github.com/madebypixel02/CPP-Modules) | *Lots of basic stuff* | C++, Makefile | ❌ | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/CPP-Modules/master) | [``2/9``](https://github.com/madebypixel02/CPP-Modules) |
+| 15 | [NetPractice](https://github.com/madebypixel02/NetPractice) | *Fred, there is an unplugged Ethernet cable...* | Networking | ❌ | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/NetPractice/master) | [![aperez-b's 42Project Score](https://badge42.vercel.app/api/v2/cl1kyexqa001109mf3u4zsrcw/project/2504102)](https://github.com/JaeSeoKim/badge42) |
 
 ### Side Projects
 
