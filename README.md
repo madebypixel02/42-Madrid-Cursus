@@ -4,6 +4,7 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 ## Main Stats
 
 <p align="center">
+  <img src="https://github-size-badge.herokuapp.com/madebypixel02/42-Madrid-Cursus.svg" />
   <a href="https://profile.intra.42.fr/users/aperez-b">
     <img src="https://badgen.net/badge/Born2Code/aperez-b/blue?cache=86400&icon=https://meta.intra.42.fr/images/42_logo.svg">
   </a>
