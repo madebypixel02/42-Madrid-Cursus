@@ -58,7 +58,7 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 | [DualShip Shooter](https://github.com/madebypixel02/DualshipShooter) | *Our Global Game Jam 2022 'duality' game* | C#, videogame, GGJ2022, hackathon, Unity | January 2022 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/DualshipShooter/master) |
 
 <p align="center">
-  <a href="https://github.com/madebypixel02">
+  <a href="https://www.42network.org">
     <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/40824677/150541520-93b9bbfe-cb72-4bd0-80ae-a6f5637d3a77.png">
     <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/40824677/191278687-a798617c-09ab-4ce4-9384-7a826357b7cf.png">
