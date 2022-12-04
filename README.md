@@ -3,19 +3,19 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 
 ## Main Stats
 
-<p align="center">
+<div align="center">
   <img src="https://img.shields.io/github/repo-size/madebypixel02/42-Madrid-Cursus?color=green" />
   <a href="https://profile.intra.42.fr/users/aperez-b">
     <img src="https://badgen.net/badge/Born2Code/aperez-b/blue?cache=86400&icon=https://meta.intra.42.fr/images/42_logo.svg">
   </a>
   <img src="https://img.shields.io/github/last-commit/madebypixel02/42-Madrid-Cursus" />
-</p>
+</div>
 
-<p align="center">
+<div align="center">
   <a href="https://gitlab.com/madebypixel02/42-Madrid-Cursus">
     <img src="https://badge42.vercel.app/api/v2/cl1kyexqa001109mf3u4zsrcw/stats?cursusId=21&coalitionId=65">
   </a>
-</p>
+</div>
 
 ## Project List
 
@@ -51,7 +51,7 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 | :-----: | :---------: | :----: | :------: | :------: |
 | [DualShip Shooter](https://gitlab.com/madebypixel02/DualshipShooter) | *Our Global Game Jam 2022 'duality' game* | C#, videogame, GGJ2022, hackathon, Unity | January 2022 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/DualshipShooter) |
 
-<p align="center">
+<div align="center">
   <a href="https://www.42network.org">
     <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/40824677/150541520-93b9bbfe-cb72-4bd0-80ae-a6f5637d3a77.png">
@@ -59,4 +59,4 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
     <img alt="42 logo in light and dark mode." src="https://user-images.githubusercontent.com/40824677/150541520-93b9bbfe-cb72-4bd0-80ae-a6f5637d3a77.png">
     </picture>
   </a>
-</p>
+</div>
