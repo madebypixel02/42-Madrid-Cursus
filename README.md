@@ -40,17 +40,17 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
 
 ### In-Progress Projects
 
-| Project | Description | Topics | Finished | Activity | Status |
-| :-------: | :---------: | :----: | :------: | :------: | :----: |
+| Project | Available At | Description | Topics | Finished | Activity | Status |
+| :-----: | :----------: | :---------: | :----: | :------: | :------: | :----: |
 | CPP Modules | <a href="https://github.com/madebypixel02/CPP-Modules"><picture><source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/40824677/205689829-11cbb3fd-d452-4846-a799-0be90146192e.png"><source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/40824677/205689834-f6b698a0-844d-46c2-8cca-2051cd3a9ef0.png"><img alt="GitHub Logo in Light or Dark." src="https://user-images.githubusercontent.com/40824677/205689829-11cbb3fd-d452-4846-a799-0be90146192e.png"></picture></a><br/><a href="https://gitlab.com/madebypixel02/CPP-Modules"><img src="https://user-images.githubusercontent.com/40824677/205691219-5698063c-44bf-453a-b4df-365654641979.png"/></a> | *Lots of basic stuff* | C++, Makefile | 🚧 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/CPP-Modules) | [``6/9``](https://gitlab.com/madebypixel02/CPP-Modules) |
 | NetPractice | <a href="https://github.com/madebypixel02/NetPractice"><picture><source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/40824677/205689829-11cbb3fd-d452-4846-a799-0be90146192e.png"><source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/40824677/205689834-f6b698a0-844d-46c2-8cca-2051cd3a9ef0.png"><img alt="GitHub Logo in Light or Dark." src="https://user-images.githubusercontent.com/40824677/205689829-11cbb3fd-d452-4846-a799-0be90146192e.png"></picture></a><br/><a href="https://gitlab.com/madebypixel02/NetPractice"><img src="https://user-images.githubusercontent.com/40824677/205691219-5698063c-44bf-453a-b4df-365654641979.png"/></a> | *Fred, there is an unplugged Ethernet cable...* | Networking | ❌ | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/NetPractice) | [![aperez-b's 42Project Score](https://badge42.vercel.app/api/v2/cl1kyexqa001109mf3u4zsrcw/project/2504102)](https://github.com/JaeSeoKim/badge42) |
 
 ### Side Projects
 
-| Project | Description | Topics | Finished | Activity |
-| :-----: | :---------: | :----: | :------: | :------: |
+| Project | Available At | Description | Topics | Finished | Activity |
+| :-----: | :----------: | :---------: | :----: | :------: | :------: |
 | DualShip Shooter | <a href="https://github.com/madebypixel02/DualshipShooter"><picture><source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/40824677/205689829-11cbb3fd-d452-4846-a799-0be90146192e.png"><source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/40824677/205689834-f6b698a0-844d-46c2-8cca-2051cd3a9ef0.png"><img alt="GitHub Logo in Light or Dark." src="https://user-images.githubusercontent.com/40824677/205689829-11cbb3fd-d452-4846-a799-0be90146192e.png"></picture></a><br/><a href="https://gitlab.com/madebypixel02/DualshipShooter"><img src="https://user-images.githubusercontent.com/40824677/205691219-5698063c-44bf-453a-b4df-365654641979.png"/></a> | *Our Global Game Jam 2022 'duality' game* | C#, videogame, GGJ2022, hackathon, Unity | January 2022 | ![GitHub Last Commit](https://img.shields.io/github/last-commit/madebypixel02/DualshipShooter) |
-
+ 
 <div align="center">
   <a href="https://www.42network.org">
     <picture>
