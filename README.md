@@ -11,12 +11,6 @@ My Personal Repository for the various projects from 42. Born2Code! :computer: :
   <img src="https://img.shields.io/github/last-commit/madebypixel02/42-Madrid-Cursus" />
 </div>
 
-<div align="center">
-  <a href="https://gitlab.com/madebypixel02/42-Madrid-Cursus">
-    <img src="https://badge42.vercel.app/api/v2/cl1kyexqa001109mf3u4zsrcw/stats?cursusId=21&coalitionId=65">
-  </a>
-</div>
-
 ## Project List
 
 ### Finished Projects
